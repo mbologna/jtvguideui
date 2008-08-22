@@ -13,7 +13,7 @@ package it.unibg.cs.jtvguide.graphic;
 public class jTVGuideUI extends javax.swing.JFrame {
 
     /**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/** Creates new form jTVGuideUI */
