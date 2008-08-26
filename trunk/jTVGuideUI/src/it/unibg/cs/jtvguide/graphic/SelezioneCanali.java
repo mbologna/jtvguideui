@@ -6,38 +6,26 @@
 
 package it.unibg.cs.jtvguide.graphic;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Container;
 import java.awt.GridLayout;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.util.Vector;
-
+import javax.swing.GroupLayout;
+import javax.swing.JButton;
 import javax.swing.JScrollPane;
 
-
-/**
-* This code was edited or generated using CloudGarden's Jigloo
-* SWT/Swing GUI Builder, which is free for non-commercial
-* use. If Jigloo is being used commercially (ie, by a corporation,
-* company or business for any purpose whatever) then you
-* should purchase a license for each developer using Jigloo.
-* Please visit www.cloudgarden.com for details.
-* Use of Jigloo implies acceptance of these licensing terms.
-* A COMMERCIAL LICENSE HAS NOT BEEN PURCHASED FOR
-* THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
-* LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
-*/
 /**
  *
  * @author  Seba
  */
-public class SelezioneCanali extends javax.swing.JFrame {
-
-    /**
-	 *
-	 */
-	private static final long serialVersionUID = 1L;
-	private Vector<String> channelNameVector = new Vector <String>();
+public class SelezioneCanali extends javax.swing.JFrame {  
+    
+    private Vector<String> channelNameVector = new Vector <String>();
     private Vector<Boolean> channelSelectedVector = new Vector <Boolean>();
     private javax.swing.JPanel checkBoxList = new javax.swing.JPanel(new GridLayout(channelNameVector.size(),2));
 
@@ -57,6 +45,8 @@ public class SelezioneCanali extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Selezione Canali");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setResizable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,63 +63,72 @@ public class SelezioneCanali extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 private void initConfig(){
-
-    it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(new File("tv_grab_it.conf"));
+  
+    try {
+			BufferedReader reader = new BufferedReader(new FileReader(new File("xmltv_configuration.txt")));
+			it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(new File(reader.readLine()));
+    }
+    catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+                        
+    
     it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator.chargeVectors();
     channelNameVector = it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator.getChannelNameVector();
     channelSelectedVector = it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator.getChannelSelectedVector();
-
+        
     Vector<javax.swing.JLabel> jLabelVector = new Vector <javax.swing.JLabel>();
     Vector<javax.swing.JCheckBox> jCheckBoxVector = new Vector <javax.swing.JCheckBox>();
-
+    
     checkBoxList.setBackground(Color.WHITE);
+    
     javax.swing.JScrollPane jScrollPane1 = new javax.swing.JScrollPane(checkBoxList,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+    
     javax.swing.JButton jButton1 = new javax.swing.JButton();
-    jButton1.setText("Modifica File Di Configurazione");
+    jButton1.setText("Modifica File Di Configurazione");   
     jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-
+    
     this.setSize(380, 480);
     this.setResizable(false);
     this.setLayout(null);
-    jButton1.setBounds(0, 400, 380, 50);
     jScrollPane1.setBounds(0, 0, 374, 400);
-
-
-
+    jButton1.setBounds(0, 400, 380, 50);
+   
     for(int i=0;i<channelNameVector.size();i++)
     {
         javax.swing.JCheckBox jCheckBox = new javax.swing.JCheckBox();
         jCheckBox.setBackground(Color.WHITE);
         javax.swing.JLabel jLabel = new javax.swing.JLabel();
-
+        
         jCheckBox.setSelected(channelSelectedVector.get(i));
         jLabel.setText(channelNameVector.get(i));
 
         jCheckBoxVector.add(jCheckBox);
         jLabelVector.add(jLabel);
-
+                
         checkBoxList.add(jCheckBoxVector.get(i));
-        checkBoxList.add(jLabelVector.get(i));
+        checkBoxList.add(jLabelVector.get(i));             
     }
-
-
-
+    
+    
+           
     getContentPane().add(jScrollPane1);
     getContentPane().add(jButton1);
-
+           
 }
 
 private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
 
     Vector<String> channelNameVectorLocal=new Vector<String>();
     Vector<Boolean> channelSelectedVectorLocal=new Vector<Boolean>();
-
+    
     Container c = ((Container) checkBoxList);
-
+        
     for(int i=0;i<c.getComponents().length;i++)
     {
         if(c.getComponent(i).toString().contains("JCheckBox")){
@@ -139,7 +138,7 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
             channelNameVectorLocal.add(((javax.swing.JLabel)c.getComponent(i)).getText());
         }
     }
-
+       
     it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator.chargeFile(channelNameVectorLocal, channelSelectedVectorLocal);
     this.dispose();
 }

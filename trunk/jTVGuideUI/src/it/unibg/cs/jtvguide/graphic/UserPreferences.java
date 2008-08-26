@@ -6,20 +6,30 @@
 
 package it.unibg.cs.jtvguide.graphic;
 
+import java.awt.FlowLayout;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.PrintStream;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
  * @author  Seba
  */
 public class UserPreferences extends javax.swing.JFrame {
-
-    /**
-	 *
-	 */
-	private static final long serialVersionUID = 1L;
-	/** Creates new form UserPreferences */
+    
+    private File configuration = new File("xmltv_configuration.txt");
+    
+    /** Creates new form UserPreferences */
     public UserPreferences() {
         initComponents();
+        initConfig();
     }
 
     /** This method is called from within the constructor to
@@ -35,19 +45,20 @@ public class UserPreferences extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        jComboBox2 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("User Preferences");
+        setResizable(false);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "5", "7", "10", "14" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Giorni:");
+        jLabel1.setText("Giorni di interesse:");
 
         jButton1.setText("Ok");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -56,14 +67,7 @@ public class UserPreferences extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("With Cache:");
-
-        jCheckBox1.setText("With Cache");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
+        jLabel2.setText("File di configurazione:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,50 +76,83 @@ public class UserPreferences extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(28, 28, 28)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCheckBox1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(179, Short.MAX_VALUE))
+            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jCheckBox1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-// TODO add your handling code here:
-}//GEN-LAST:event_jComboBox1ActionPerformed
+    private void initConfig() {
+        File dir = new File(".");
+        if(dir.exists()){
+            File[] list = dir.listFiles();
+            for (int i = 0; i < list.length; i++){
+                String fileName = list[i].toString();
+                int iPtr = fileName.lastIndexOf("\\");
+                int jPtr = fileName.indexOf(".conf",0);
+                if (jPtr>-1) {
+                    String longName = (String) fileName.subSequence(2, fileName.length());
+                    jComboBox2.addItem(longName);
+                }
+            }
+        }
+        try {
+			BufferedReader reader = new BufferedReader(new FileReader(configuration));
+			String lineRead = null;
+			lineRead = reader.readLine();
+                        jComboBox2.setSelectedItem(lineRead);
+                        lineRead = reader.readLine();
+                        jComboBox1.setSelectedItem(lineRead);
+        }
+        catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
 
 private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     it.unibg.cs.jtvguide.xmltv.UserPreferences.setDays(Integer.parseInt(jComboBox1.getSelectedItem().toString()));
-    it.unibg.cs.jtvguide.xmltv.UserPreferences.setWithCache(jCheckBox1.isSelected());
+    it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(new File(jComboBox2.getSelectedItem().toString()));
+    
+        try {
+            PrintStream ps = new PrintStream(new FileOutputStream(configuration));
+            System.setOut(ps);
+            System.out.println(jComboBox2.getSelectedItem().toString());
+            System.setOut(ps);
+            System.out.println(jComboBox1.getSelectedItem().toString());
+        } 
+        catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+ 
     this.setVisible(false);
 }//GEN-LAST:event_jButton1ActionPerformed
 
-private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
 // TODO add your handling code here:
-}//GEN-LAST:event_jCheckBox1ActionPerformed
+}//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
     * @param args the command line arguments
@@ -130,8 +167,8 @@ private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
