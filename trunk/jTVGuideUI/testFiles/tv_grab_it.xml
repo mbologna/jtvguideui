@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE tv SYSTEM "xmltv.dtd">
+
+<tv source-info-url="http://guidatv.sky.it,http://www.mtv.it,http://wfactory.net,http://boingtv.it,http://sitcom1.it" source-data-url="http://guidatv.sky.it/,http://www.mtv.it/tv/palinsesto/index.asp,http://www.wfactory.net/showcase/programmi.jsp,http://www.boingtv.it/palinsesto/dati/palinsesto.xml,http://www.sitcom1.it/guidatv.asp" generator-info-name="XMLTV" generator-info-url="http://membled.com/work/apps/xmltv/">
+  <channel id="www.canale5.com">
+    <display-name>Canale 5</display-name>
+    <display-name>893</display-name>
+    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/893.gif" />
+  </channel>
+  <channel id="www.italia1.com">
+    <display-name>Italia 1</display-name>
+    <display-name>894</display-name>
+    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/894.gif" />
+  </channel>
+  <programme start="20080826012000 +0200" stop="20080826015000 +0200" channel="www.canale5.com">
+    <title lang="it">TG5 Notte - Meteo 5</title>
+    <desc lang="it">L'informazione delle ultime ore del giorno con le previsioni sulla condizione metereologica dell'indomani su tutta Italia.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826015000 +0200" stop="20080826022000 +0200" channel="www.canale5.com">
+    <title lang="it">Veline</title>
+    <desc lang="it">Ezio Greggio cerca di trovare le Veline per la prossima stagione di Striscia la Notizia, esaminando a modo suo centinaia di belle ragazze.</desc>
+    <category lang="it">Show</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826022000 +0200" stop="20080826023000 +0200" channel="www.canale5.com">
+    <title lang="it">Mediashopping</title>
+    <desc lang="it">La televendita delle reti Mediaset. Un ampio catalogo di prodotti in vetrina con la possibilita' di realizzare i propri acquisti da casa 24 ore su 24.</desc>
+    <category lang="it">Shopping</category>
+  </programme>
+  <programme start="20080826023000 +0200" stop="20080826031500 +0200" channel="www.canale5.com">
+    <title lang="it">Squadra Med - Il coraggio delle donne</title>
+    <sub-title lang="it">Stagione 6 - Mia sorella, il mio medico e me</sub-title>
+    <desc lang="it">La storia di Luisa Delgado, impulsiva dottoressa dal cuore d'oro che lavora in una clinica gratuita di Philadelphia.</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 6</episode-num>
+    <episode-num system="xmltv_ns">5..0/1</episode-num>
+  </programme>
+  <programme start="20080826031500 +0200" stop="20080826032500 +0200" channel="www.canale5.com">
+    <title lang="it">Mediashopping</title>
+    <desc lang="it">La televendita delle reti Mediaset. Un ampio catalogo di prodotti in vetrina con la possibilita' di realizzare i propri acquisti da casa 24 ore su 24.</desc>
+    <category lang="it">Shopping</category>
+  </programme>
+  <programme start="20080826032500 +0200" stop="20080826040000 +0200" channel="www.canale5.com">
+    <title lang="it">Tre nipoti e un maggiordomo</title>
+    <desc lang="it">Uno scapolo di Manhattan si trova a dover crescere i tre nipoti rimasti orfani, l'adolescente Cissy e i piccoli Buffy e Jody.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826040000 +0200" stop="20080826043000 +0200" channel="www.canale5.com">
+    <title lang="it">TG5 - Meteo 5</title>
+    <desc lang="it">Notizie dell'ultima ora comprensive di servizi e collegamenti dall'estero. A seguire, in chiusura, gli aggiornamenti in tempo reale della situazione metereologica e delle previsioni su tutta l'Italia.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826052500 +0200" stop="20080826053000 +0200" channel="www.canale5.com">
+    <title lang="it">3 minuti con Mediashopping</title>
+    <desc lang="it">Un breve spazio promozionale in cui vengono presentate le ultime novita' in vendita con Mediashopping.</desc>
+    <category lang="it">Shopping</category>
+  </programme>
+  <programme start="20080826053000 +0200" stop="20080826060000 +0200" channel="www.canale5.com">
+    <title lang="it">TG5 - Meteo 5</title>
+    <desc lang="it">Notizie dell'ultima ora comprensive di servizi e collegamenti dall'estero. A seguire, in chiusura, gli aggiornamenti in tempo reale della situazione metereologica e delle previsioni su tutta l'Italia.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826060000 +0200" stop="20080826075000 +0200" channel="www.canale5.com">
+    <title lang="it">TG5 - Prima Pagina</title>
+    <desc lang="it">Le ultime notizie dall'Italia e dall'estero e la rassegna stampa quotidiana dei principali giornali in uscita nelle edicole.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826075000 +0200" stop="20080826075500 +0200" channel="www.canale5.com">
+    <title lang="it">Traffico - Meteo 5</title>
+    <desc lang="it">Le informazioni sulla viabilita' e sul tempo metereologico per chi deve mettersi in viaggio.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826075500 +0200" stop="20080826080000 +0200" channel="www.canale5.com">
+    <title lang="it">Borsa e Monete</title>
+    <desc lang="it">Uno sguardo sul mondo della finanza, con le ultime notizie e le quotazioni delle piu' importanti Borse europee e mondiali.</desc>
+    <category lang="it">Economia</category>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826080000 +0200" stop="20080826085000 +0200" channel="www.canale5.com">
+    <title lang="it">TG5 Mattina</title>
+    <desc lang="it">L'informazione delle prime ore della giornata, dall'Italia e dal mondo, sui fatti di cronaca, di attualita' e di politica.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826085000 +0200" stop="20080826092000 +0200" channel="www.canale5.com">
+    <title lang="it">Tutti amano Raymond</title>
+    <sub-title lang="it">Stagione 9 Episodio 11 - Il custode</sub-title>
+    <desc lang="it">Ray intrattiene Michael, Geoffrey e il loro nuovo amico Chris con una barzelletta sui custodi, senza sapere che il padre di Chris e' il custode della scuola.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 9 Episodio 11</episode-num>
+    <episode-num system="xmltv_ns">8.10.0/1</episode-num>
+  </programme>
+  <programme start="20080826110000 +0200" stop="20080826130000 +0200" channel="www.canale5.com">
+    <title lang="it">Forum</title>
+    <desc lang="it">Davanti al giudice, due cittadini presentano le proprie cause. Segue un dibattito, gli spettatori danno la loro opinione, e alla fine il giudice emette la sentenza.</desc>
+    <category lang="it">Show</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826130000 +0200" stop="20080826134000 +0200" channel="www.canale5.com">
+    <title lang="it">TG5 - Meteo 5</title>
+    <desc lang="it">Notizie dell'ultima ora comprensive di servizi e collegamenti dall'estero. A seguire, in chiusura, gli aggiornamenti in tempo reale della situazione metereologica e delle previsioni su tutta l'Italia.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826134000 +0200" stop="20080826141000 +0200" channel="www.canale5.com">
+    <title lang="it">Beautiful</title>
+    <sub-title lang="it">Episodio 5211</sub-title>
+    <desc lang="it">Storm confessa a Brooke e Katie di aver sparato lui a Stephanie, con l'intento di incastrare il padre. Stephanie propone a Stephen una riduzione della pena in cambio di una sua confessione.</desc>
+    <category lang="it">Soap Opera</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Episodio 5211</episode-num>
+    <episode-num system="xmltv_ns">.5210.0/1</episode-num>
+  </programme>
+  <programme start="20080826141000 +0200" stop="20080826144500 +0200" channel="www.canale5.com">
+    <title lang="it">Centovetrine</title>
+    <sub-title lang="it">Episodio 1737</sub-title>
+    <desc lang="it">Noemi comprende solo adesso il vero piano della madre e ne e' sconvolta. Laura incontra Ester sulla tomba di Cristina e in seguito chiama al telefono il suo vecchio amico Luca.</desc>
+    <category lang="it">Soap Opera</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Episodio 1737</episode-num>
+    <episode-num system="xmltv_ns">.1736.0/1</episode-num>
+  </programme>
+  <programme start="20080826144500 +0200" stop="20080826155500 +0200" channel="www.canale5.com">
+    <title lang="it">My Life</title>
+    <desc lang="it">Joanna si allontana da Kodjo, responsabile della sua custodia, e rischia di essere investita dall'auto di Hacki, che la riporta a casa, tranquillizzano cosi' i preoccupatissimi Jule e Kodjo.</desc>
+    <category lang="it">Soap Opera</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826155500 +0200" stop="20080826165500 +0200" channel="www.canale5.com">
+    <title lang="it">Una mamma per amica</title>
+    <sub-title lang="it">Stagione 7 Episodio 9 - Il maglia-thon</sub-title>
+    <desc lang="it">Lorelai e Christopher affrontano i pettegoli di Stars Hollow, che ancora non sanno che si sono sposati. Intanto in citta' e' stato organizzato un ''MagliaThon''.</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 7 Episodio 9</episode-num>
+    <episode-num system="xmltv_ns">6.8.0/1</episode-num>
+  </programme>
+  <programme start="20080826165500 +0200" stop="20080826170000 +0200" channel="www.canale5.com">
+    <title lang="it">TG5 Minuti</title>
+    <desc lang="it">Aggiornamenti con le notizie da tutto il mondo.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826185000 +0200" stop="20080826200000 +0200" channel="www.canale5.com">
+    <title lang="it">Jackpot - Fate il vostro gioco</title>
+    <desc lang="it">Una coppia di concorrenti deve rispondere ad una serie di domande di cultura generale di difficolta' crescente per arrivare al montepremi di 500,000 euro.</desc>
+    <category lang="it">Quiz</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826200000 +0200" stop="20080826203000 +0200" channel="www.canale5.com">
+    <title lang="it">TG5 - Meteo 5</title>
+    <desc lang="it">Notizie dell'ultima ora comprensive di servizi e collegamenti dall'estero. A seguire, in chiusura, gli aggiornamenti in tempo reale della situazione metereologica e delle previsioni su tutta l'Italia.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826203000 +0200" stop="20080826211000 +0200" channel="www.canale5.com">
+    <title lang="it">Veline</title>
+    <desc lang="it">Ezio Greggio cerca di trovare le Veline per la prossima stagione di Striscia la Notizia, esaminando a modo suo centinaia di belle ragazze.</desc>
+    <category lang="it">Show</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826234000 +0200" stop="20080827003500 +0200" channel="www.canale5.com">
+    <title lang="it">Dirty Sexy Money</title>
+    <sub-title lang="it">Stagione 1 Episodio 7 - Matrimonio</sub-title>
+    <desc lang="it">La mamma del figlio di Brian arriva in citta' per riprendersi il bambino, ma Brian ha un'idea diversa. Intanto, Karen si sposa un'altra volta.</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 1 Episodio 7</episode-num>
+    <episode-num system="xmltv_ns">0.6.0/1</episode-num>
+  </programme>
+  <programme start="20080826092000 +0200" stop="20080826110000 +0200" channel="www.canale5.com">
+    <title lang="it">Posta del cuore</title>
+    <desc lang="it">Ryan Turner, broker di successo, perde tutto per una dritta sbagliata; ma scoprira' le vere cose importanti della vita.</desc>
+    <credits>
+      <director>S.Rash</director>
+      <actor>C.Sheen</actor>
+      <actor>D.Richards</actor>
+    </credits>
+    <date>2001</date>
+    <category lang="it">Film</category>
+    <category lang="it">Commedia</category>
+    <country lang="it">USA</country>
+  </programme>
+  <programme start="20080826043000 +0200" stop="20080826052500 +0200" channel="www.canale5.com">
+    <title lang="it">Boston Public</title>
+    <sub-title lang="it">Stagione 3 Episodio 13 - Attrazione fatale</sub-title>
+    <desc lang="it">Le vicende di un prestigioso liceo, tra insegnanti bizzarri, studenti svogliati, e un preside che cerca di far contenti tutti.</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 3 Episodio 13</episode-num>
+    <episode-num system="xmltv_ns">2.12.0/1</episode-num>
+  </programme>
+  <programme start="20080826211000 +0200" stop="20080826234000 +0200" channel="www.canale5.com">
+    <title lang="it">In Her Shoes - Se fossi lei</title>
+    <desc lang="it">Maggie e Rose, due sorelle dal carattere opposto, si separano in seguito ad un litigio. La loro nonna sara' capace di riunirle.</desc>
+    <credits>
+      <director>C.Hanson</director>
+      <actor>C.Diaz</actor>
+      <actor>T.Collette</actor>
+    </credits>
+    <date>2005</date>
+    <category lang="it">Film</category>
+    <category lang="it">Commedia</category>
+    <country lang="it">USA</country>
+  </programme>
+  <programme start="20080826170000 +0200" stop="20080826185000 +0200" channel="www.canale5.com">
+    <title lang="it">Inga Lindstrom - L'aquilone</title>
+    <desc lang="it">Una coppia, in crisi per il fatto di non poter avere figli, parte per un viaggio in barca. Su un'isola conoscono un medico...</desc>
+    <credits>
+      <director>M.Steinke</director>
+      <actor>V.Niehaus</actor>
+      <actor>A.Lutz</actor>
+    </credits>
+    <date>2004</date>
+    <category lang="it">Film</category>
+    <category lang="it">Romantico</category>
+    <country lang="it">DEU</country>
+  </programme>
+  <programme start="20080826012500 +0200" stop="20080826015000 +0200" channel="www.italia1.com">
+    <title lang="it">Studio Sport</title>
+    <desc lang="it">I servizi, le interviste ai personaggi e le ultime notizie sugli avvenimenti sportivi piu' importanti della giornata.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826015000 +0200" stop="20080826015500 +0200" channel="www.italia1.com">
+    <title lang="it">3 minuti con Mediashopping</title>
+    <desc lang="it">Un breve spazio promozionale in cui vengono presentate le ultime novita' in vendita con Mediashopping.</desc>
+    <category lang="it">Shopping</category>
+  </programme>
+  <programme start="20080826015500 +0200" stop="20080826021000 +0200" channel="www.italia1.com">
+    <title lang="it">Studio aperto - La giornata</title>
+    <desc lang="it">Tutti gli eventi di cronaca e le notizie di politica estera e degli interni di maggiore interesse di tutta la giornata.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826021000 +0200" stop="20080826023500 +0200" channel="www.italia1.com">
+    <title lang="it">Talent 1</title>
+    <desc lang="it">In onda i video piu' votati tra quelli caricati dagli spettatori sul sito www.talent1.mediaset.it.</desc>
+    <category lang="it">Show</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826023500 +0200" stop="20080826025000 +0200" channel="www.italia1.com">
+    <title lang="it">Shopping by Night</title>
+    <desc lang="it">Televendita quotidiana: una vetrina di prodotti di tutti i tipi, che lo spettatore puo' acquistare telefonando in trasmissione.</desc>
+    <category lang="it">Shopping</category>
+  </programme>
+  <programme start="20080826025000 +0200" stop="20080826034000 +0200" channel="www.italia1.com">
+    <title lang="it">Camelot - Squadra Emergenza</title>
+    <sub-title lang="it">Stagione 5 Episodio 18 - Senso di colpa</sub-title>
+    <desc lang="it">Hart e' il nuovo pompiere della squadra.</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 5 Episodio 18</episode-num>
+    <episode-num system="xmltv_ns">4.17.0/1</episode-num>
+  </programme>
+  <programme start="20080826034000 +0200" stop="20080826035500 +0200" channel="www.italia1.com">
+    <title lang="it">Shopping by Night</title>
+    <desc lang="it">Televendita quotidiana: una vetrina di prodotti di tutti i tipi, che lo spettatore puo' acquistare telefonando in trasmissione.</desc>
+    <category lang="it">Shopping</category>
+  </programme>
+  <programme start="20080826035500 +0200" stop="20080826053000 +0200" channel="www.italia1.com">
+    <title lang="it">La strada per il successo</title>
+    <desc lang="it">La storia vera della vita di David Cassidy, diventato famoso giovanissimo per il telefilm ''La famiglia Partridge''.</desc>
+    <credits>
+      <director>J.Bender</director>
+      <actor>A.Kavovit</actor>
+      <actor>M.McDowell</actor>
+    </credits>
+    <date>2000</date>
+    <category lang="it">Film</category>
+    <category lang="it">Drammatico</category>
+    <country lang="it">USA</country>
+  </programme>
+  <programme start="20080826053000 +0200" stop="20080826055500 +0200" channel="www.italia1.com">
+    <title lang="it">Studio Sport</title>
+    <desc lang="it">I servizi, le interviste ai personaggi e le ultime notizie sugli avvenimenti sportivi piu' importanti della giornata.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826055500 +0200" stop="20080826060500 +0200" channel="www.italia1.com">
+    <title lang="it">Studio aperto - La giornata</title>
+    <desc lang="it">Tutti gli eventi di cronaca e le notizie di politica estera e degli interni di maggiore interesse di tutta la giornata.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826060500 +0200" stop="20080826062500 +0200" channel="www.italia1.com">
+    <title lang="it">Zanzibar</title>
+    <desc lang="it">Le avventure di un gruppo di assidui frequentatori di un bar, in cui passano gran parte della loro giornata.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826062500 +0200" stop="20080826065000 +0200" channel="www.italia1.com">
+    <title lang="it">Zanzibar</title>
+    <desc lang="it">Le avventure di un gruppo di assidui frequentatori di un bar, in cui passano gran parte della loro giornata.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826065000 +0200" stop="20080826065500 +0200" channel="www.italia1.com">
+    <title lang="it">3 minuti con Mediashopping</title>
+    <desc lang="it">Un breve spazio promozionale in cui vengono presentate le ultime novita' in vendita con Mediashopping.</desc>
+    <category lang="it">Shopping</category>
+  </programme>
+  <programme start="20080826065500 +0200" stop="20080826075000 +0200" channel="www.italia1.com">
+    <title lang="it">Le nuove avventure di Flipper</title>
+    <desc lang="it">Le avventure di un intelligente e simpatico delfino e dei suoi amici, due ragazzi e due adulti, che lo aiutano a far del bene.</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826075000 +0200" stop="20080826082000 +0200" channel="www.italia1.com">
+    <title lang="it">Scooby Doo</title>
+    <desc lang="it">Le avventure 'ai confini della realta'' del cane piu' fifone del mondo e dei suoi amici, che insieme formano il Mistery Team.</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826082000 +0200" stop="20080826085000 +0200" channel="www.italia1.com">
+    <title lang="it">Pinocchio</title>
+    <desc lang="it">Geppetto costruisce una marionetta di legno che, straordinariamente, inizia a prendere vita: lo chiamera' Pinocchio.</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826085000 +0200" stop="20080826091500 +0200" channel="www.italia1.com">
+    <title lang="it">C'era una volta Pollon</title>
+    <desc lang="it">I miti greci rivisitati in chiave umoristica e irriverente attraverso la piccola Pollon, figlia di Apollo che da grande vol fare la dea. Creato da Kokusai Eigasha nel 1982</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826091500 +0200" stop="20080826093500 +0200" channel="www.italia1.com">
+    <title lang="it">Doraemon</title>
+    <desc lang="it">Il robot di famiglia, Doraemon, viene mandato indietro nel tempo, per vegliare su Nobita, il trisavolo combinaguai.</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826093500 +0200" stop="20080826095500 +0200" channel="www.italia1.com">
+    <title lang="it">Dr. Slump e Arale</title>
+    <desc lang="it">Lo stravagante inventore Dottor Slump ha creato un robot-bambina, Arale, che ha straordinarie capacita'. Insieme vivono nel paese pia' strano della Terra, dove capitano loro mille avventure.</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826095500 +0200" stop="20080826103000 +0200" channel="www.italia1.com">
+    <title lang="it">Sabrina, vita da strega</title>
+    <sub-title lang="it">Stagione 4 Episodio 10 - L'acchiappa streghe</sub-title>
+    <desc lang="it">Harvey decide di regalare a Sabrina un romantico week-end in montagna ma, al momento di partire, si unisce a loro un suo amico, Brad, cacciatore di streghe.</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 4 Episodio 10</episode-num>
+    <episode-num system="xmltv_ns">3.9.0/1</episode-num>
+  </programme>
+  <programme start="20080826103000 +0200" stop="20080826112500 +0200" channel="www.italia1.com">
+    <title lang="it">Buffy</title>
+    <sub-title lang="it">Stagione 3 Episodio 22 - La sfida. 2a parte</sub-title>
+    <desc lang="it">Tutto sembra perduto: il sangue di Faith non puo' salvare Angel e Buffy decide di farsi mordere da lui, mettendo a repentaglio la sua stessa vita.</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 3 Episodio 22</episode-num>
+    <episode-num system="xmltv_ns">2.21.0/1</episode-num>
+  </programme>
+  <programme start="20080826112500 +0200" stop="20080826113000 +0200" channel="www.italia1.com">
+    <title lang="it">3 minuti con Mediashopping</title>
+    <desc lang="it">Un breve spazio promozionale in cui vengono presentate le ultime novita' in vendita con Mediashopping.</desc>
+    <category lang="it">Shopping</category>
+  </programme>
+  <programme start="20080826113000 +0200" stop="20080826122500 +0200" channel="www.italia1.com">
+    <title lang="it">Smallville</title>
+    <sub-title lang="it">Stagione 3 Episodio 12 - Visioni di morte</sub-title>
+    <desc lang="it">Jordan, un ragazzo appena arrivato a scuola, ha uno strano dono: gli basta toccare qualcuno per aver ''la visione'' di come morira'.</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 3 Episodio 12</episode-num>
+    <episode-num system="xmltv_ns">2.11.0/1</episode-num>
+  </programme>
+  <programme start="20080826122500 +0200" stop="20080826130000 +0200" channel="www.italia1.com">
+    <title lang="it">Studio Aperto - Meteo</title>
+    <desc lang="it">Notizie dell'ultima ora, comprensivi di servizi e collegamenti dall'estero. A seguire, in chiusura, gli aggiornamenti in tempo reale della situazione metereologica.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826130000 +0200" stop="20080826133500 +0200" channel="www.italia1.com">
+    <title lang="it">Studio Sport</title>
+    <desc lang="it">I servizi, le interviste ai personaggi e le ultime notizie sugli avvenimenti sportivi piu' importanti della giornata.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826133500 +0200" stop="20080826134000 +0200" channel="www.italia1.com">
+    <title lang="it">MotoGP Quiz</title>
+    <desc lang="it">...programmazione non disponibile</desc>
+    <category lang="it">Quiz</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826134000 +0200" stop="20080826140500 +0200" channel="www.italia1.com">
+    <title lang="it">What's My Destiny Dragon Ball</title>
+    <desc lang="it">Le fantastiche avventure delle creature della serie Dragon Ball: Raditz, Goku, Piccolo, Kurilin e tutti gli altri.</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826140500 +0200" stop="20080826143000 +0200" channel="www.italia1.com">
+    <title lang="it">One Piece - Tutti all'arrembaggio</title>
+    <desc lang="it">Rubber ha un grande sogno nel cassetto: divenatre il re dei pirati. Parte cosi' con l'amico Koby alla conquista di un tesoro...</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826143000 +0200" stop="20080826150000 +0200" channel="www.italia1.com">
+    <title lang="it">Lupin III - C'era una volta... Lupin</title>
+    <desc lang="it">Regia di M.Ohara; JPN 2002 (30 min). Il ladro Lupin aveva deciso di rubare un manoscritto di alchimia, e proprio Jigen era stato assoldato per proteggerlo.</desc>
+    <category lang="it">Film</category>
+    <category lang="it">Animazione</category>
+  </programme>
+  <programme start="20080826150000 +0200" stop="20080826155500 +0200" channel="www.italia1.com">
+    <title lang="it">Paso adelante</title>
+    <sub-title lang="it">Stagione 2 Episodio 10 - Un mare di pettegolezzi</sub-title>
+    <desc lang="it">Juan parla ad Ingrid dell'omosessualita' di Diana non sapendo che altre allieve stanno ascoltando la conversazione.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 2 Episodio 10</episode-num>
+    <episode-num system="xmltv_ns">1.9.0/1</episode-num>
+  </programme>
+  <programme start="20080826155500 +0200" stop="20080826162500 +0200" channel="www.italia1.com">
+    <title lang="it">Summer Dreams</title>
+    <sub-title lang="it">Stagione 2 - Padri e figli</sub-title>
+    <desc lang="it">Un gruppo di ragazzi si ritrova come ogni anno in vacanza sulla costa francese. Tante avventure animano le loro giornate.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 2</episode-num>
+    <episode-num system="xmltv_ns">1..0/1</episode-num>
+  </programme>
+  <programme start="20080826162500 +0200" stop="20080826165000 +0200" channel="www.italia1.com">
+    <title lang="it">Summer Dreams</title>
+    <sub-title lang="it">Stagione 2 - Capirsi</sub-title>
+    <desc lang="it">Un gruppo di ragazzi si ritrova come ogni anno in vacanza sulla costa francese. Tante avventure animano le loro giornate.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 2</episode-num>
+    <episode-num system="xmltv_ns">1..0/1</episode-num>
+  </programme>
+  <programme start="20080826165000 +0200" stop="20080826171500 +0200" channel="www.italia1.com">
+    <title lang="it">Un genio sul divano</title>
+    <sub-title lang="it">Stagione 2 - L'influenza del genio</sub-title>
+    <desc lang="it">Quando Emma e Sophie si trasferiscono nella nuova casa, trovano una vecchia lampada che nasconde... un genio!</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 2</episode-num>
+    <episode-num system="xmltv_ns">1..0/1</episode-num>
+  </programme>
+  <programme start="20080826171500 +0200" stop="20080826174000 +0200" channel="www.italia1.com">
+    <title lang="it">Un fiocco per sognare</title>
+    <desc lang="it">Grazie ad un magico fiocco rosso, uno specchio e un braccialetto, la piccola Himi acquista straordinari poteri e, insieme al suo peluche Pokota', affronta incredibili avventure.</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826174000 +0200" stop="20080826175000 +0200" channel="www.italia1.com">
+    <title lang="it">Bernard</title>
+    <desc lang="it">Un buffo orso polare privo di peluria e' il simpatico protagonista di una serie di brevi ma esilaranti avventure.</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826175000 +0200" stop="20080826180500 +0200" channel="www.italia1.com">
+    <title lang="it">SpongeBob</title>
+    <desc lang="it">Le surreali avventure della spugna marina Spongebob che vive a Bikini Bottom, una citta' nelle profondita' del mare. Spongebob lavora in un fast food e cucina favolosi panini.</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826180500 +0200" stop="20080826183000 +0200" channel="www.italia1.com">
+    <title lang="it">Batman</title>
+    <desc lang="it">Le avventure di Batman, l'uomo pipistrello, e del suo compagno Robin, che combattono per difendere Gotham City dal crimine.</desc>
+    <category lang="it">Cartoni Animati</category>
+  </programme>
+  <programme start="20080826183000 +0200" stop="20080826190000 +0200" channel="www.italia1.com">
+    <title lang="it">Studio Aperto - Meteo</title>
+    <desc lang="it">Notizie dell'ultima ora, comprensivi di servizi e collegamenti dall'estero. A seguire, in chiusura, gli aggiornamenti in tempo reale della situazione metereologica.</desc>
+    <category lang="it">Informazione</category>
+  </programme>
+  <programme start="20080826190000 +0200" stop="20080826190500 +0200" channel="www.italia1.com">
+    <title lang="it">3 minuti con Mediashopping</title>
+    <desc lang="it">Un breve spazio promozionale in cui vengono presentate le ultime novita' in vendita con Mediashopping.</desc>
+    <category lang="it">Shopping</category>
+  </programme>
+  <programme start="20080826190500 +0200" stop="20080826193500 +0200" channel="www.italia1.com">
+    <title lang="it">Friends</title>
+    <sub-title lang="it">Stagione 5 Episodio 7 - Un ospite scomodo</sub-title>
+    <desc lang="it">Ross torna a vivere con Joey e Chandler, ma le sue abitudini innervosiscono i due amici che alla fine gli chiedono di cercarsi un'altra casa.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 5 Episodio 7</episode-num>
+    <episode-num system="xmltv_ns">4.6.0/1</episode-num>
+  </programme>
+  <programme start="20080826193500 +0200" stop="20080826200500 +0200" channel="www.italia1.com">
+    <title lang="it">Friends</title>
+    <sub-title lang="it">Stagione 5 Episodio 8 - Il ricordo di un giorno di festa</sub-title>
+    <desc lang="it">I ragazzi festeggiano il giorno del Ringraziamento, ma Ross confida agli amici che quello e' il suo peggior giorno del Ringraziamento.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 5 Episodio 8</episode-num>
+    <episode-num system="xmltv_ns">4.7.0/1</episode-num>
+  </programme>
+  <programme start="20080826200500 +0200" stop="20080826204500 +0200" channel="www.italia1.com">
+    <title lang="it">Camera Cafe' Celebrity Edition</title>
+    <desc lang="it">Breve striscia introduttiva alle avventure di Luca Nervi e Paolo Bitta. L'azienda e' in crisi e la soluzione e' una fusione.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+  </programme>
+  <programme start="20080826204500 +0200" stop="20080826211000 +0200" channel="www.italia1.com">
+    <title lang="it">La vita secondo Jim</title>
+    <sub-title lang="it">Stagione 5 - Jim il gentleman</sub-title>
+    <desc lang="it">Jim ha una moglie e tre bambini, ma deve ancora crescere lui stesso. Le avventure di questa famiglia strampalata e del capofamiglia piu' goffo che si conosca.</desc>
+    <category lang="it">Sit Com</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Stagione 5</episode-num>
+    <episode-num system="xmltv_ns">4..0/1</episode-num>
+  </programme>
+  <programme start="20080826211000 +0200" stop="20080826230000 +0200" channel="www.italia1.com">
+    <title lang="it">The Medallion</title>
+    <desc lang="it">L'ispettore Yang, esperto di arti marziali, indaga su un misterioso medaglione che, pare, rende invincibile chi lo possiede.</desc>
+    <credits>
+      <director>G.Chan</director>
+      <actor>J.Chan</actor>
+      <actor>L.Evans</actor>
+    </credits>
+    <date>2003</date>
+    <category lang="it">Film</category>
+    <category lang="it">Azione</category>
+    <country lang="it">USA</country>
+  </programme>
+  <programme start="20080826230000 +0200" stop="20080827000500 +0200" channel="www.italia1.com">
+    <title lang="it">Un ciclone in famiglia 2</title>
+    <sub-title lang="it">Episodio 6</sub-title>
+    <desc lang="it">Lorenzo, Alberto e Peppino, iniziano la loro nuova attivita' di manager. Lorenzo diviene Presidente della multinazionale di Kutuzov in Italia.</desc>
+    <category lang="it">Fiction</category>
+    <category lang="it">Intrattenimento</category>
+    <episode-num system="onscreen">Episodio 6</episode-num>
+    <episode-num system="xmltv_ns">.5.0/1</episode-num>
+  </programme>
+</tv>

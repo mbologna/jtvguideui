@@ -15,6 +15,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
@@ -33,6 +35,7 @@ public class SelezioneCanali extends javax.swing.JFrame {
     public SelezioneCanali() {
         initComponents();
         initConfig();
+        this.setVisible(true);
     }
 
     /** This method is called from within the constructor to
@@ -114,9 +117,7 @@ private void initConfig(){
         checkBoxList.add(jCheckBoxVector.get(i));
         checkBoxList.add(jLabelVector.get(i));             
     }
-    
-    
-           
+               
     getContentPane().add(jScrollPane1);
     getContentPane().add(jButton1);
            
@@ -138,9 +139,10 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
             channelNameVectorLocal.add(((javax.swing.JLabel)c.getComponent(i)).getText());
         }
     }
-       
+     
     it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator.chargeFile(channelNameVectorLocal, channelSelectedVectorLocal);
     this.dispose();
+    this.removeAll();
 }
     /**
     * @param args the command line arguments
@@ -148,7 +150,7 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SelezioneCanali().setVisible(true);
+                new SelezioneCanali();
             }
         });
     }
