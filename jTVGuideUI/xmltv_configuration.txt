@@ -1,2 +1,2 @@
-tv_grab_it2.conf
+tv_grab_it.conf
 1
