@@ -7,10 +7,10 @@
 package it.unibg.cs.jtvguide.graphic;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.PrintStream;
+import java.io.FileWriter;
 
 
 /**
@@ -147,11 +147,17 @@ private void write_xmltv_configuration(){
     it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(new File(jComboBox2.getSelectedItem().toString()));
     
     try {
-        PrintStream ps = new PrintStream(new FileOutputStream(configuration));
+        /*PrintStream ps = new PrintStream(new FileOutputStream(configuration));
         System.setOut(ps);
         System.out.println(jComboBox2.getSelectedItem().toString());
         System.setOut(ps);
-        System.out.println(jComboBox1.getSelectedItem().toString());
+        System.out.println(jComboBox1.getSelectedItem().toString());*/
+        FileWriter fstream = new FileWriter(configuration);
+        BufferedWriter out = new BufferedWriter(fstream);
+        out.write(jComboBox2.getSelectedItem().toString()+'\n');
+        out.write(jComboBox1.getSelectedItem().toString()+'\n');
+        out.close();
+        
     } 
     catch (Exception e) {
         // TODO Auto-generated catch block
