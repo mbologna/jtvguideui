@@ -4,7 +4,7 @@
  * Created on 12 agosto 2008, 16.11
  */
 
-package it.unibg.cs.jtvguide.graphic;
+package it.unibg.cs.jtvguide.gui;
 
 import it.unibg.cs.jtvguide.collection.Schedule;
 import it.unibg.cs.jtvguide.data.Program;
@@ -17,6 +17,9 @@ import java.io.FileReader;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -186,6 +189,22 @@ private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     * @param args the command line arguments
     */
     public static void main(String args[]) {
+    		try {
+				UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InstantiationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (UnsupportedLookAndFeelException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new jTVGuideUI().setVisible(true);

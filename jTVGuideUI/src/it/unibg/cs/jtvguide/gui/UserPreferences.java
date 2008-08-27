@@ -4,7 +4,7 @@
  * Created on 12 agosto 2008, 16.22
  */
 
-package it.unibg.cs.jtvguide.graphic;
+package it.unibg.cs.jtvguide.gui;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

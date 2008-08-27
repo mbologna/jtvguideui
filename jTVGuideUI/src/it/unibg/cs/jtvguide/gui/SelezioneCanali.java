@@ -4,7 +4,7 @@
  * Created on 13 agosto 2008, 14.54
  */
 
-package it.unibg.cs.jtvguide.graphic;
+package it.unibg.cs.jtvguide.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
