@@ -14,6 +14,7 @@ import java.awt.GridLayout;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.Iterator;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -70,15 +71,21 @@ private void initConfig(){
     try {
 			BufferedReader reader = new BufferedReader(new FileReader(new File("xmltv_configuration.txt")));
 			it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(new File(reader.readLine()));
+			System.out.println(it.unibg.cs.jtvguide.xmltv.UserPreferences.getXmltvConfigFile());
     }
     catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-                        
-    
+                      
+    //System.out.println("foo");
     it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator.chargeVectors();
     channelNameVector = it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator.getChannelNameVector();
+    for (Iterator iter = channelNameVector.iterator(); iter.hasNext();) {
+		Object element = (Object) iter.next();
+		System.out.println(element);
+		
+	}
     channelSelectedVector = it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator.getChannelSelectedVector();
         
     Vector<javax.swing.JLabel> jLabelVector = new Vector <javax.swing.JLabel>();
