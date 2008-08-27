@@ -18,6 +18,9 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JLabel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -41,6 +44,8 @@ public class jTVGuideUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
+        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -51,11 +56,39 @@ public class jTVGuideUI extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+
+        jDialog1.setTitle("Scarica Programmazione");
+        jDialog1.setBounds(new java.awt.Rectangle(0, 0, 200, 200));
+        jDialog1.setResizable(false);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("jLabel1");
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addContainerGap(47, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap(247, Short.MAX_VALUE))
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addContainerGap(89, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap(110, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Visualizza programmi");
+        jPanel1.setName("null"); // NOI18N
+
+        jButton1.setText("Visualizza programmi in onda");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -73,7 +106,7 @@ public class jTVGuideUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(529, Short.MAX_VALUE)
+                        .addContainerGap(491, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -117,6 +150,14 @@ public class jTVGuideUI extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem3);
 
+        jMenuItem4.setText("Scarica Programmazione");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem4);
+
         jMenuItem2.setText("Exit");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,17 +193,34 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 }//GEN-LAST:event_jMenuItem1ActionPerformed
 
 private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+    String text="";
+    Schedule s = new Schedule();
+    s.update();
+    List<Program> lk = s.getOnAirPrograms(new Date());
+    for (Iterator<Program> iterator = lk.iterator(); iterator.hasNext();) {
+        Program p = (Program) iterator.next();
+        text=text+p+"\n";
+    }
+    jTextArea1.setText(text);
+}//GEN-LAST:event_jButton1ActionPerformed
+
+private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    new SelezioneCanali();
+}//GEN-LAST:event_jMenuItem3ActionPerformed
+
+private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    
     try {
-			BufferedReader reader = new BufferedReader(new FileReader(new File("xmltv_configuration.txt")));
-            File configurationFile = new File(reader.readLine());
-            int days = Integer.parseInt(reader.readLine());
-			it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(configurationFile);
-			it.unibg.cs.jtvguide.xmltv.UserPreferences.setDays(days);
+        BufferedReader reader = new BufferedReader(new FileReader(new File("xmltv_configuration.txt")));
+        File configurationFile = new File(reader.readLine());
+        int days = Integer.parseInt(reader.readLine());
+	it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(configurationFile);
+	it.unibg.cs.jtvguide.xmltv.UserPreferences.setDays(days);
     }
     catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        e.printStackTrace();
+    }
 
     String text="";
     Schedule s = new Schedule();
@@ -177,12 +235,10 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         Program p = (Program) iterator.next();
         text=text+p+"\n";
     }
-    jTextArea1.setText(text);
-}//GEN-LAST:event_jButton1ActionPerformed
-
-private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-    new SelezioneCanali();
-}//GEN-LAST:event_jMenuItem3ActionPerformed
+    jDialog1.setVisible(true);
+    ((JLabel)jDialog1.getContentPane().getComponent(0)).setText("Aggiornamento completato...");
+    
+}//GEN-LAST:event_jMenuItem4ActionPerformed
 
 
     /**
@@ -204,7 +260,6 @@ private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-    
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new jTVGuideUI().setVisible(true);
@@ -214,6 +269,8 @@ private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JDialog jDialog1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
@@ -221,6 +278,7 @@ private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
