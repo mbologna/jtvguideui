@@ -9,7 +9,7 @@ package it.unibg.cs.jtvguide.graphic;
 import it.unibg.cs.jtvguide.collection.Schedule;
 import it.unibg.cs.jtvguide.data.Program;
 import it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator;
-import it.unibg.cs.jtvguide.xmltv.XMLTVGrabber;
+import it.unibg.cs.jtvguide.xmltv.XMLTVScheduleDownloader;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -166,7 +166,7 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     s.update();
     XMLTVConfigurator.chargeVectors();
     if((!s.isAdequate(XMLTVConfigurator.getSelectedChannelNameVector(), it.unibg.cs.jtvguide.xmltv.UserPreferences.getDays()))||(!s.isUpToDate())){
-        XMLTVGrabber.grabSchedule();
+        XMLTVScheduleDownloader.grabSchedule();
         s.update();
     }
     List<Program> lk = s.getOnAirPrograms(new Date());
