@@ -6,9 +6,7 @@
 
 package it.unibg.cs.jtvguide.gui;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Container;
 import java.awt.GridLayout;
 import java.io.BufferedReader;
@@ -16,10 +14,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Iterator;
 import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.GroupLayout;
-import javax.swing.JButton;
 import javax.swing.JScrollPane;
 
 /**

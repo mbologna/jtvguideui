@@ -11,7 +11,6 @@ import it.unibg.cs.jtvguide.data.Program;
 import it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator;
 import it.unibg.cs.jtvguide.xmltv.XMLTVScheduleDownloader;
 
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -21,10 +20,6 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JLabel;
-import javax.swing.JProgressBar;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -232,11 +227,11 @@ private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     new SelezioneCanali();
 }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {                                           
 
 	jDialog1.setVisible(true);
 	jProgressBar1.setVisible(true);
-    jLabel1.setText("Sto scaricando...");
+        jLabel1.setText("Sto scaricando...");
 
 }
 
