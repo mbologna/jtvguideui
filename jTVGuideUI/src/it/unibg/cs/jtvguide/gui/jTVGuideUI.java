@@ -11,6 +11,9 @@ import it.unibg.cs.jtvguide.data.Program;
 import it.unibg.cs.jtvguide.xmltv.XMLTVConfigurator;
 import it.unibg.cs.jtvguide.xmltv.XMLTVScheduleDownloader;
 
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -21,6 +24,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
+import javax.swing.JProgressBar;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -44,8 +48,9 @@ public class jTVGuideUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDialog1 = new javax.swing.JDialog();
+    	jDialog1 = new javax.swing.JDialog();
         jLabel1 = new javax.swing.JLabel();
+        jProgressBar1 = new javax.swing.JProgressBar();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -60,33 +65,50 @@ public class jTVGuideUI extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         jDialog1.setTitle("Scarica Programmazione");
-        jDialog1.setBounds(new java.awt.Rectangle(0, 0, 200, 200));
+        jDialog1.setBackground(java.awt.Color.white);
+        jDialog1.setBounds(new java.awt.Rectangle(0, 0, 280, 150));
         jDialog1.setResizable(false);
+        jDialog1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("jLabel1");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12));
+        jLabel1.setBounds(80,70,150,15);
+        jLabel1.setText("Sto scaricando...");
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jProgressBar1.setBorderPainted(false);
+        jProgressBar1.setIndeterminate(true);
+        jProgressBar1.setRequestFocusEnabled(false);
+        jProgressBar1.setBounds(20, 20, 230, 35);
+
+
+
+        jDialog1.add(jProgressBar1);
+        jDialog1.add(jLabel1);
+        jDialog1.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        /*javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
         jDialog1Layout.setHorizontalGroup(
             jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDialog1Layout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialog1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDialog1Layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jLabel1)))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
         jDialog1Layout.setVerticalGroup(
             jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDialog1Layout.createSequentialGroup()
-                .addContainerGap(89, Short.MAX_VALUE)
+                .addGap(25, 25, 25)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addContainerGap(110, Short.MAX_VALUE))
-        );
+                .addContainerGap(220, Short.MAX_VALUE))
+        );*/
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setName("null"); // NOI18N
 
         jButton1.setText("Visualizza programmi in onda");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -156,6 +178,7 @@ public class jTVGuideUI extends javax.swing.JFrame {
                 jMenuItem4ActionPerformed(evt);
             }
         });
+        jMenuItem4.addActionListener(new AggiornaProgrammazione());
         jMenu1.add(jMenuItem4);
 
         jMenuItem2.setText("Exit");
@@ -210,35 +233,53 @@ private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 }//GEN-LAST:event_jMenuItem3ActionPerformed
 
 private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-    
-    try {
-        BufferedReader reader = new BufferedReader(new FileReader(new File("xmltv_configuration.txt")));
-        File configurationFile = new File(reader.readLine());
-        int days = Integer.parseInt(reader.readLine());
-	it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(configurationFile);
-	it.unibg.cs.jtvguide.xmltv.UserPreferences.setDays(days);
-    }
-    catch (Exception e) {
-        e.printStackTrace();
+
+	jDialog1.setVisible(true);
+	jProgressBar1.setVisible(true);
+    jLabel1.setText("Sto scaricando...");
+
+}
+
+private class AggiornaProgrammazione implements ActionListener, Runnable {
+
+    public void actionPerformed(ActionEvent e) {
+        Thread t = new Thread(this);
+        t.start();
     }
 
-    String text="";
-    Schedule s = new Schedule();
-    s.update();
-    XMLTVConfigurator.chargeVectors();
-    if((!s.isAdequate(XMLTVConfigurator.getSelectedChannelNameVector(), it.unibg.cs.jtvguide.xmltv.UserPreferences.getDays()))||(!s.isUpToDate())){
-        XMLTVScheduleDownloader.grabSchedule();
+    public void run() {
+
+    	jDialog1.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+    	jProgressBar1.setIndeterminate(true);
+        try
+        {
+        	BufferedReader reader = new BufferedReader(new FileReader(new File("xmltv_configuration.txt")));
+            File configurationFile = new File(reader.readLine());
+            int days = Integer.parseInt(reader.readLine());
+            it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(configurationFile);
+            it.unibg.cs.jtvguide.xmltv.UserPreferences.setDays(days);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        Schedule s = new Schedule();
         s.update();
+        XMLTVConfigurator.chargeVectors();
+        if((!s.isAdequate(XMLTVConfigurator.getSelectedChannelNameVector(), it.unibg.cs.jtvguide.xmltv.UserPreferences.getDays()))||(!s.isUpToDate())){
+            XMLTVScheduleDownloader.grabSchedule();
+            s.update();
+        }
+        jDialog1.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jProgressBar1.setIndeterminate(false);
+        jProgressBar1.setMaximum(100);
+        jProgressBar1.setValue(100);
+        jLabel1.setBounds(45, 70, 200, 15);
+        jLabel1.setText("Aggiornamento completato!!!");
     }
-    List<Program> lk = s.getOnAirPrograms(new Date());
-    for (Iterator<Program> iterator = lk.iterator(); iterator.hasNext();) {
-        Program p = (Program) iterator.next();
-        text=text+p+"\n";
-    }
-    jDialog1.setVisible(true);
-    ((JLabel)jDialog1.getContentPane().getComponent(0)).setText("Aggiornamento completato...");
-    
-}//GEN-LAST:event_jMenuItem4ActionPerformed
+
+}
+
 
 
     /**
@@ -282,6 +323,7 @@ private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JProgressBar jProgressBar1;
     // End of variables declaration//GEN-END:variables
 
 }
