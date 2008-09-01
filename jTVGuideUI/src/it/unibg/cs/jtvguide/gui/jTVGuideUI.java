@@ -47,7 +47,6 @@ public class jTVGuideUI extends javax.swing.JFrame {
         jDialog1 = new javax.swing.JDialog();
         jLabel1 = new javax.swing.JLabel();
         jProgressBar1 = new javax.swing.JProgressBar();
-        jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -66,45 +65,20 @@ public class jTVGuideUI extends javax.swing.JFrame {
         jDialog1.setBackground(java.awt.Color.white);
         jDialog1.setBounds(new java.awt.Rectangle(0, 0, 280, 150));
         jDialog1.setResizable(false);
+        jDialog1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setBounds(80,70,150,15);
         jLabel1.setText("Sto scaricando...");
 
         jProgressBar1.setBorderPainted(false);
         jProgressBar1.setIndeterminate(true);
         jProgressBar1.setRequestFocusEnabled(false);
-        jProgressBar1.setString("30%");
+        jProgressBar1.setBounds(20,20,230,35);
 
-        jButton2.setText("jButton2");
-
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1)
-                            .addComponent(jButton2))))
-                .addContainerGap(127, Short.MAX_VALUE))
-        );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(11, 11, 11)
-                .addComponent(jButton2)
-                .addContainerGap(186, Short.MAX_VALUE))
-        );
+        jDialog1.add(jProgressBar1);
+        jDialog1.add(jLabel1);
+        jDialog1.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("jTVGuide v1.0");
@@ -192,6 +166,7 @@ public class jTVGuideUI extends javax.swing.JFrame {
                 jMenuItem4ActionPerformed(evt);
             }
         });
+        jMenuItem4.addActionListener(new AggiornaProgrammazione());
         jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
@@ -238,11 +213,11 @@ private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     new SelezioneCanali();
 }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {                                           
+private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {
 
 	jDialog1.setVisible(true);
 	jProgressBar1.setVisible(true);
-        jLabel1.setText("Sto scaricando...");
+    jLabel1.setText("Sto scaricando...");
 
 }
 
@@ -260,9 +235,12 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
         try
         {
         	BufferedReader reader = new BufferedReader(new FileReader(new File("xmltv_configuration.txt")));
-            File configurationFile = new File(reader.readLine());
+            File configuration = new File(reader.readLine());
             int days = Integer.parseInt(reader.readLine());
-            it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(configurationFile);
+
+            it.unibg.cs.jtvguide.xmltv.UserPreferences.setCountry("it");
+            File configfile = new File(it.unibg.cs.jtvguide.xmltv.UserPreferences.getXMLTVCommandByCountry()+".conf");
+            it.unibg.cs.jtvguide.xmltv.UserPreferences.setXmltvConfigFile(configfile);
             it.unibg.cs.jtvguide.xmltv.UserPreferences.setDays(days);
         }
         catch (Exception e) {
@@ -276,11 +254,12 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
             XMLTVScheduleDownloader.grabSchedule();
             s.update();
         }
+
         jDialog1.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jProgressBar1.setIndeterminate(false);
         jProgressBar1.setMaximum(100);
         jProgressBar1.setValue(100);
-        jLabel1.setBounds(45, 70, 200, 15);
+        jLabel1.setBounds(35, 70, 200, 15);
         jLabel1.setText("Aggiornamento completato!!!");
     }
 
@@ -316,7 +295,6 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
