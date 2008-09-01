@@ -261,10 +261,10 @@ public class Preferences extends javax.swing.JFrame {
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
     if (jCheckBox1.isEnabled()) {
-        UserPreferences.setVerbose(false);
+        UserPreferences.setVerbose(true);
     }
     else {
-        UserPreferences.setVerbose(true);
+        UserPreferences.setVerbose(false);
     }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
     /**
