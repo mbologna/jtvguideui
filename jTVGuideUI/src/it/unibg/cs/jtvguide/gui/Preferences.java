@@ -19,8 +19,8 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
 import javax.swing.JFileChooser;
-import org.jdesktop.layout.GroupLayout;
-import org.jdesktop.layout.LayoutStyle;
+import javax.swing.GroupLayout;
+import javax.swing.LayoutStyle;
 
 
 /**
@@ -180,25 +180,25 @@ public class Preferences extends javax.swing.JFrame {
         }
         layout.setVerticalGroup(layout.createSequentialGroup()
         	.addContainerGap()
-        	.add(jPanel1, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
-        	.addPreferredGap(LayoutStyle.RELATED)
-        	.add(jPanel2, 0, 156, Short.MAX_VALUE)
-        	.addPreferredGap(LayoutStyle.UNRELATED)
-        	.add(layout.createParallelGroup(GroupLayout.BASELINE)
-        	    .add(GroupLayout.BASELINE, jButton1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	    .add(GroupLayout.BASELINE, jButton5, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
+        	.addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+        	.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+        	.addComponent(jPanel2, 0, 156, Short.MAX_VALUE)
+        	.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+        	.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+        	    .addComponent(jButton1, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+        	    .addComponent(jButton5, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
         	.addContainerGap());
         layout.setHorizontalGroup(layout.createSequentialGroup()
         	.addContainerGap()
-        	.add(layout.createParallelGroup()
-        	    .add(GroupLayout.LEADING, jPanel1, 0, 345, Short.MAX_VALUE)
-        	    .add(GroupLayout.LEADING, jPanel2, 0, 345, Short.MAX_VALUE)
-        	    .add(GroupLayout.LEADING, layout.createSequentialGroup()
-        	        .add(213)
-        	        .add(jButton1, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)
-        	        .addPreferredGap(LayoutStyle.RELATED)
-        	        .add(jButton5, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE)
-        	        .add(8)))
+        	.addGroup(layout.createParallelGroup()
+        	    .addComponent(jPanel1, GroupLayout.Alignment.LEADING, 0, 345, Short.MAX_VALUE)
+        	    .addComponent(jPanel2, GroupLayout.Alignment.LEADING, 0, 345, Short.MAX_VALUE)
+        	    .addGroup(GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+        	        .addGap(213)
+        	        .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)
+        	        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+        	        .addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE)
+        	        .addGap(8)))
         	.addContainerGap());
 
         jCheckBox1.setText("quiet");
@@ -230,32 +230,32 @@ public class Preferences extends javax.swing.JFrame {
 
         jLabel2.setText("Download data for:");
         jPanel2Layout.setVerticalGroup(jPanel2Layout.createSequentialGroup()
-        	.add(jCheckBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	.addPreferredGap(LayoutStyle.RELATED)
-        	.add(jCheckBox2, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	.add(0, 27, Short.MAX_VALUE)
-        	.add(jPanel2Layout.createParallelGroup(GroupLayout.BASELINE)
-        	    .add(GroupLayout.BASELINE, jLabel2, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	    .add(GroupLayout.BASELINE, jLabel3, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
-        	.addPreferredGap(LayoutStyle.UNRELATED)
-        	.add(jSlider1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+        	.addComponent(jCheckBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+        	.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+        	.addComponent(jCheckBox2, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+        	.addGap(0, 27, Short.MAX_VALUE)
+        	.addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+        	    .addComponent(jLabel2, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+        	    .addComponent(jLabel3, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
+        	.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+        	.addComponent(jSlider1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
         	.addContainerGap(26, 26));
         jPanel2Layout.setHorizontalGroup(jPanel2Layout.createSequentialGroup()
         	.addContainerGap()
-        	.add(jPanel2Layout.createParallelGroup()
-        	    .add(GroupLayout.LEADING, jPanel2Layout.createSequentialGroup()
-        	        .add(jPanel2Layout.createParallelGroup()
-        	            .add(GroupLayout.LEADING, jLabel2, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	            .add(GroupLayout.LEADING, jPanel2Layout.createSequentialGroup()
-        	                .add(jCheckBox2, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	                .add(24)))
-        	        .addPreferredGap(LayoutStyle.RELATED)
-        	        .add(jLabel3, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	        .add(153))
-        	    .add(GroupLayout.LEADING, jPanel2Layout.createSequentialGroup()
-        	        .add(jCheckBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	        .add(16)
-        	        .add(jSlider1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)))
+        	.addGroup(jPanel2Layout.createParallelGroup()
+        	    .addGroup(GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+        	        .addGroup(jPanel2Layout.createParallelGroup()
+        	            .addComponent(jLabel2, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+        	            .addGroup(GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+        	                .addComponent(jCheckBox2, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+        	                .addGap(24)))
+        	        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+        	        .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+        	        .addGap(153))
+        	    .addGroup(GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+        	        .addComponent(jCheckBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
+        	        .addGap(16)
+        	        .addComponent(jSlider1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)))
         	.addContainerGap(65, 65));
 
         jLabel3.setText(Integer.toString(it.unibg.cs.jtvguide.UserPreferences.getDays())+" days");
