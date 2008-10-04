@@ -90,9 +90,8 @@ public class Preferences extends javax.swing.JFrame {
         String locale = SystemProperties.getSystemLanguage();
         for (XMLTVGrabbersByCountry element : XMLTVGrabbersByCountry.values()) {
             jComboBox1.addItem(element);
-            if (element.getLOCALE().equals(locale)) {
-                jComboBox1.setSelectedItem(element);
-            }
+            if(element.getCOMMAND().equals(it.unibg.cs.jtvguide.UserPreferences.getXMLTVCommandByCountry()))
+            	jComboBox1.setSelectedItem(element);
         }
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,7 +298,7 @@ public class Preferences extends javax.swing.JFrame {
         	it.unibg.cs.jtvguide.UserPreferences.setXmltvOutputFile(jfc.getSelectedFile().getAbsoluteFile().getName());
         	//UserPreferences.setXmltvOutputFile(jfc.getSelectedFile().getAbsoluteFile());
             jButton4.setText(jfc.getSelectedFile().getName());
-        }        // TODO add your handling code here:
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed

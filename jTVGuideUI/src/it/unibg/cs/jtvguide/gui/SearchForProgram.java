@@ -30,7 +30,7 @@ public class SearchForProgram extends JPanel {
 	 *
 	 */
 
-	JPanel jp = new JPanel();
+	//JPanel jp = new JPanel();
 	JTextField jt = new JTextField();
 	JTextArea ja = new JTextArea();
 	JScrollPane scrollPane = new JScrollPane(ja);
@@ -38,17 +38,17 @@ public class SearchForProgram extends JPanel {
 
 	public SearchForProgram(){//(String title) {
 		//super(title);
-		this.add(jp);
+		//this.add(jp);
 		setLayout(new BorderLayout());
 		jt.getDocument().addDocumentListener(new MyListener());
 
-		jp.add(BorderLayout.NORTH, jt);
-		jp.add(BorderLayout.CENTER, scrollPane);
+		this.add(BorderLayout.NORTH, jt);
+		this.add(BorderLayout.CENTER, scrollPane);
 		XMLTVCommander xmltvc = new XMLTVCommander();
 		XMLTVParserImpl xmltvParser = new XMLTVParserImpl();
 		int tries = 0;
 
-		while (!UserPreferences.loadFromXMLFile()
+		/*while (!UserPreferences.loadFromXMLFile()
 				|| !UserPreferences.getXmltvConfigFile().exists()
 				|| UserPreferences.getXmltvConfigFile().length() == 0) {
 			System.out.println("Configuring jTVGuide and XMLTV...");
@@ -77,7 +77,8 @@ public class SearchForProgram extends JPanel {
 			System.out.println("Trying to parse schedule...");
 			parsed = xmltvParser.parse();
 			tries++;
-		}
+		}*/
+		xmltvParser.parse();
 		schedule = xmltvParser.getSchedule();
 		System.out.println("Schedule parsed correctly.");
 	}

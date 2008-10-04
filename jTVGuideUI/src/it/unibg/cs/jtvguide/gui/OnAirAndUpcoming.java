@@ -26,7 +26,7 @@ public class OnAirAndUpcoming extends JPanel implements Runnable {
 	 */
 	private static final long serialVersionUID = -9221049871768124350L;
 	private static Thread thread;
-	JPanel jp = new JPanel();
+	//JPanel jp = new JPanel();
 	Random r = new Random();
 	Schedule schedule;
 	static int counter = FileUtils.uncommentedLinesCount(UserPreferences
@@ -34,12 +34,12 @@ public class OnAirAndUpcoming extends JPanel implements Runnable {
 
 	public OnAirAndUpcoming(){//String title) {
 		//super(title);
-		this.add(jp);
-		XMLTVCommander xmltvc = new XMLTVCommander();
+		//this.add(jp);
+		//XMLTVCommander xmltvc = new XMLTVCommander();
 		XMLTVParserImpl xmltvParser = new XMLTVParserImpl();
-		int tries = 0;
+		//int tries = 0;
 
-		while (!UserPreferences.loadFromXMLFile()
+		/*while (!UserPreferences.loadFromXMLFile()
 				|| !UserPreferences.getXmltvConfigFile().exists()
 				|| UserPreferences.getXmltvConfigFile().length() == 0) {
 			System.out.println("Configuring jTVGuide and XMLTV...");
@@ -68,7 +68,8 @@ public class OnAirAndUpcoming extends JPanel implements Runnable {
 			System.out.println("Trying to parse schedule...");
 			parsed = xmltvParser.parse();
 			tries++;
-		}
+		}*/
+		xmltvParser.parse();
 		schedule = xmltvParser.getSchedule();
 		System.out.println("Schedule parsed correctly.");
 		thread = new Thread(this);
@@ -91,7 +92,7 @@ public class OnAirAndUpcoming extends JPanel implements Runnable {
 	public void run() {
 		while (true) {
 			if (schedule != null) {
-				jp.removeAll();
+				this.removeAll();
 				List<Program> lk = schedule.getOnAirPrograms();
 				List<Program> lp = schedule.getUpcomingPrograms();
 				if (lk.size() != counter || lp.size() != counter) {
@@ -101,7 +102,7 @@ public class OnAirAndUpcoming extends JPanel implements Runnable {
 					//throw new RuntimeException("mismatch");
 				}
 
-				jp.setLayout(new GridLayout(lk.size() + lp.size(), 2));
+				this.setLayout(new GridLayout(lk.size() + lp.size(), 2));
 				for (Program p : lk) {
 					JProgressBar jb = new JProgressBar();
 					jb.setString(p.getInfo());
@@ -112,8 +113,8 @@ public class OnAirAndUpcoming extends JPanel implements Runnable {
 						jl.setToolTipText(p.getDesc());
 						jb.setToolTipText(p.getDesc());
 					}
-					jp.add(jl);
-					jp.add(jb);
+					this.add(jl);
+					this.add(jb);
 				}
 				for (Program p : lp) {
 					JLabel jl1 = new JLabel(p.toString());
@@ -122,10 +123,10 @@ public class OnAirAndUpcoming extends JPanel implements Runnable {
 						jl1.setToolTipText(p.getDesc());
 						jl2.setToolTipText(p.getDesc());
 					}
-					jp.add(jl1);
-					jp.add(jl2);
+					this.add(jl1);
+				this.add(jl2);
 				}
-				jp.revalidate();
+				this.revalidate();
 			}
 			try {
 				Thread.sleep(1000 * (r.nextInt(5) + 5));
