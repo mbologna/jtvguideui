@@ -14,6 +14,7 @@ import it.unibg.cs.jtvguide.model.XMLTVScheduleInspector;
 import it.unibg.cs.jtvguide.util.MD5Checksum;
 import it.unibg.cs.jtvguide.xmltv.XMLTVCommander;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
+import java.awt.FlowLayout;
 
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -24,10 +25,25 @@ import java.io.FileReader;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
 
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+
+/**
+* This code was edited or generated using CloudGarden's Jigloo
+* SWT/Swing GUI Builder, which is free for non-commercial
+* use. If Jigloo is being used commercially (ie, by a corporation,
+* company or business for any purpose whatever) then you
+* should purchase a license for each developer using Jigloo.
+* Please visit www.cloudgarden.com for details.
+* Use of Jigloo implies acceptance of these licensing terms.
+* A COMMERCIAL LICENSE HAS NOT BEEN PURCHASED FOR
+* THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
+* LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
+*/
 /**
  *
  * @author  Seba
@@ -100,14 +116,23 @@ public class jTVGuideUI extends javax.swing.JFrame {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 684, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 701, Short.MAX_VALUE)
-        );
+        {
+        	jTabbedPane1 = new JTabbedPane();
+        	{
+        		jPanel1 = new OnAirAndUpcoming();
+        		//FlowLayout jPanel1Layout = new FlowLayout();
+        		jTabbedPane1.addTab("OnAirAndUpcoming", null, jPanel1, null);
+        		//jPanel1.setLayout(jPanel1Layout);
+        	}
+        	{
+        		jPanel2 = new SearchForProgram();
+        		jTabbedPane1.addTab("SearchForProgram", null, jPanel2, null);
+        	}
+        }
+        layout.setVerticalGroup(layout.createSequentialGroup()
+        	.addComponent(jTabbedPane1, 0, 575, Short.MAX_VALUE));
+        layout.setHorizontalGroup(layout.createSequentialGroup()
+        	.addComponent(jTabbedPane1, 0, 684, Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>
@@ -209,12 +234,12 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private JPanel jPanel2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
