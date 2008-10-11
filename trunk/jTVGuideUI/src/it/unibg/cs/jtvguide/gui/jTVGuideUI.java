@@ -218,6 +218,10 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
 					|| !MD5Checksum.checkMD5(it.unibg.cs.jtvguide.UserPreferences
 							.getXmltvConfigFile().toString(), MD5Checksum
 							.readMD5FromFile())) {
+				if(!it.unibg.cs.jtvguide.UserPreferences.getXmltvConfigFile().exists()){
+					System.out.println("Configuring jTVGuide and XMLTV...");
+					xmltvc.configureXMLTV();
+				}
 				System.out.println("Updating schedule...");
 				it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
 				xmltvc.downloadSchedule();
@@ -294,7 +298,6 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDialog jDialog1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -306,7 +309,6 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JFrame jFrame1;
     // End of variables declaration//GEN-END:variables
