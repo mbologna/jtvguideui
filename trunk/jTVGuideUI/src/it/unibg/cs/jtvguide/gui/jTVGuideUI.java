@@ -7,12 +7,15 @@
 package it.unibg.cs.jtvguide.gui;
 import it.unibg.cs.jtvguide.model.XMLTVScheduleInspector;
 import it.unibg.cs.jtvguide.util.MD5Checksum;
+import it.unibg.cs.jtvguide.util.SystemProperties;
 import it.unibg.cs.jtvguide.xmltv.XMLTVCommander;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
 
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -76,15 +79,15 @@ public class jTVGuideUI extends javax.swing.JFrame {
 
         jFrame1.setVisible(false);
         jFrame1.setTitle("Error!");
-        jFrame1.setPreferredSize(new java.awt.Dimension(222, 200));
+        jFrame1.setPreferredSize(new java.awt.Dimension(238, 159));
         jFrame1.setIconImage(Toolkit.getDefaultToolkit().getImage("icons/exclaim.png"));
         jFrame1.getContentPane().setLayout(null);
         {
         	jLabel1 = new JLabel();
         	jFrame1.getContentPane().add(jLabel1);
-        	jLabel1.setText("Errori nel parsing!");
+        	jLabel1.setText("Resetted configuration file. Tray again.");
         	jLabel1.setLayout(null);
-        	jLabel1.setBounds(49, 26, 114, 36);
+        	jLabel1.setBounds(10, 23, 210, 36);
         	jLabel1.setHorizontalTextPosition(SwingConstants.CENTER);
         	jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
         }
@@ -93,7 +96,7 @@ public class jTVGuideUI extends javax.swing.JFrame {
         	jFrame1.getContentPane().add(jButton1);
         	jButton1.setText("Ok");
         	jButton1.setLayout(null);
-        	jButton1.setBounds(49, 111, 111, 23);
+        	jButton1.setBounds(61, 81, 108, 23);
         	jButton1.setHorizontalTextPosition(SwingConstants.CENTER);
         	jButton1.addActionListener(new java.awt.event.ActionListener() {
         	    public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +104,7 @@ public class jTVGuideUI extends javax.swing.JFrame {
         	    }
         	});
         }
-        jFrame1.setSize(222, 200);
+        jFrame1.setSize(238, 159);
 
         jMenu1.setText("File");
 
@@ -204,7 +207,10 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
     public void run() {
     	XMLTVCommander xmltvc = new XMLTVCommander();
     	XMLTVParserImpl xmltvParser = new XMLTVParserImpl();
+    	Calendar c = Calendar.getInstance();
+		c.add(Calendar.DATE, it.unibg.cs.jtvguide.UserPreferences.getDays());
 		int tries = 0;
+
 
 		boolean parsed = false;
 		while (parsed == false && tries <= 3) {
@@ -216,10 +222,17 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
 				it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
 				xmltvc.downloadSchedule();
 			}
+
+			if(!new XMLTVScheduleInspector().isUpToDate(c.getTime()))
+			{
+				System.out.println("Updating schedule...");
+				it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
+				xmltvc.downloadSchedule();
+			}
+
 			if (tries >= 1) {
 				System.out.println("Couldn't parsing. Downloading a new schedule.");
 				it.unibg.cs.jtvguide.UserPreferences.getXmltvOutputFile().delete();
-				it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
 				xmltvc.downloadSchedule();
 			}
 			if (tries == 4)
@@ -230,7 +243,6 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
 			tries++;
 		}
 		System.out.println("Schedule parsed correctly.");
-		//System.out.println("ciao");
 
 		if(parsed)
 		{
@@ -243,6 +255,7 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
 
 		else
 		{
+			it.unibg.cs.jtvguide.UserPreferences.resetXMLFile();
 			jFrame1.setVisible(true);
 		}
 
