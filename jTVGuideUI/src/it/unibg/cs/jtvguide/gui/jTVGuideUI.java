@@ -5,30 +5,20 @@
  */
 
 package it.unibg.cs.jtvguide.gui;
-
-
-import it.unibg.cs.jtvguide.UserPreferences;
-import it.unibg.cs.jtvguide.interfaces.xmltv.XMLTVConfigurator;
-import it.unibg.cs.jtvguide.model.Schedule;
 import it.unibg.cs.jtvguide.model.XMLTVScheduleInspector;
 import it.unibg.cs.jtvguide.util.MD5Checksum;
 import it.unibg.cs.jtvguide.xmltv.XMLTVCommander;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
-import java.awt.FlowLayout;
 
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-
-import javax.swing.UIManager;
+import javax.swing.SwingConstants;
 import javax.swing.UnsupportedLookAndFeelException;
 
 
@@ -50,7 +40,14 @@ import javax.swing.UnsupportedLookAndFeelException;
  */
 public class jTVGuideUI extends javax.swing.JFrame {
 
-    /** Creates new form jTVGuideUI */
+    /**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 *
+	 */
+	/** Creates new form jTVGuideUI */
     public jTVGuideUI() {
         initComponents();
     }
@@ -64,6 +61,7 @@ public class jTVGuideUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+    	jFrame1 = new javax.swing.JFrame();
     	jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -75,6 +73,35 @@ public class jTVGuideUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("jTVGuide v1.0");
         setIconImage(Toolkit.getDefaultToolkit().getImage("icons/tv.png"));
+
+        jFrame1.setVisible(false);
+        jFrame1.setTitle("Error!");
+        jFrame1.setPreferredSize(new java.awt.Dimension(222, 200));
+        jFrame1.setIconImage(Toolkit.getDefaultToolkit().getImage("icons/exclaim.png"));
+        jFrame1.getContentPane().setLayout(null);
+        {
+        	jLabel1 = new JLabel();
+        	jFrame1.getContentPane().add(jLabel1);
+        	jLabel1.setText("Errori nel parsing!");
+        	jLabel1.setLayout(null);
+        	jLabel1.setBounds(49, 26, 114, 36);
+        	jLabel1.setHorizontalTextPosition(SwingConstants.CENTER);
+        	jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
+        }
+        {
+        	jButton1 = new JButton();
+        	jFrame1.getContentPane().add(jButton1);
+        	jButton1.setText("Ok");
+        	jButton1.setLayout(null);
+        	jButton1.setBounds(49, 111, 111, 23);
+        	jButton1.setHorizontalTextPosition(SwingConstants.CENTER);
+        	jButton1.addActionListener(new java.awt.event.ActionListener() {
+        	    public void actionPerformed(java.awt.event.ActionEvent evt) {
+        	        jButton1ActionPerformed(evt);
+        	    }
+        	});
+        }
+        jFrame1.setSize(222, 200);
 
         jMenu1.setText("File");
 
@@ -138,6 +165,10 @@ public class jTVGuideUI extends javax.swing.JFrame {
     }// </editor-fold>
 
 
+protected void jButton1ActionPerformed(ActionEvent evt) {
+		jFrame1.setVisible(false);
+	}
+
 private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
  System.exit(0);
 }//GEN-LAST:event_jMenuItem2ActionPerformed
@@ -146,6 +177,8 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     Preferences p = new Preferences();
     p.setVisible(true);
 }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+
 
 private class SelezionaCanali implements ActionListener, Runnable { //GEN-FIRST:event_jMenuItem3ActionPerformed
 
@@ -180,12 +213,13 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
 							.getXmltvConfigFile().toString(), MD5Checksum
 							.readMD5FromFile())) {
 				System.out.println("Updating schedule...");
+				it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
 				xmltvc.downloadSchedule();
 			}
 			if (tries >= 1) {
-				System.out
-				.println("Couldn't parsing. Downloading a new schedule.");
+				System.out.println("Couldn't parsing. Downloading a new schedule.");
 				it.unibg.cs.jtvguide.UserPreferences.getXmltvOutputFile().delete();
+				it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
 				xmltvc.downloadSchedule();
 			}
 			if (tries == 4)
@@ -196,7 +230,25 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
 			tries++;
 		}
 		System.out.println("Schedule parsed correctly.");
+		//System.out.println("ciao");
+
+		if(parsed)
+		{
+			jTabbedPane1.removeAll();
+			jPanel1 = new OnAirAndUpcoming();
+			jTabbedPane1.addTab("OnAirAndUpcoming", null, jPanel1, null);
+			jPanel2 = new SearchForProgram();
+			jTabbedPane1.addTab("SearchForProgram", null, jPanel2, null);
+		}
+
+		else
+		{
+			jFrame1.setVisible(true);
+		}
+
+
     }
+
 
 }
 
@@ -207,7 +259,7 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
     */
     public static void main(String args[]) {
     		try {
-				UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+				javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -230,10 +282,11 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog jDialog1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private JButton jButton1;
+    private JLabel jLabel1;
     private JPanel jPanel2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
@@ -242,6 +295,7 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JFrame jFrame1;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -26,52 +26,13 @@ public class OnAirAndUpcoming extends JPanel implements Runnable {
 	 */
 	private static final long serialVersionUID = -9221049871768124350L;
 	private static Thread thread;
-	//JPanel jp = new JPanel();
 	Random r = new Random();
 	Schedule schedule;
-	static int counter = FileUtils.uncommentedLinesCount(UserPreferences
-			.getXmltvConfigFile());
 
-	public OnAirAndUpcoming(){//String title) {
-		//super(title);
-		//this.add(jp);
-		//XMLTVCommander xmltvc = new XMLTVCommander();
+	public OnAirAndUpcoming(){
 		XMLTVParserImpl xmltvParser = new XMLTVParserImpl();
-		//int tries = 0;
-
-		/*while (!UserPreferences.loadFromXMLFile()
-				|| !UserPreferences.getXmltvConfigFile().exists()
-				|| UserPreferences.getXmltvConfigFile().length() == 0) {
-			System.out.println("Configuring jTVGuide and XMLTV...");
-			xmltvc.configureXMLTV();
-			UserPreferences.saveToXMLFile();
-		}
-
-		boolean parsed = false;
-		while (parsed == false && tries <= 3) {
-			if (!new XMLTVScheduleInspector().isUpToDate()
-					|| !MD5Checksum.checkMD5(UserPreferences
-							.getXmltvConfigFile().toString(), MD5Checksum
-							.readMD5FromFile())) {
-				System.out.println("Updating schedule...");
-				xmltvc.downloadSchedule();
-			}
-			if (tries >= 1) {
-				System.out
-				.println("Couldn't parsing. Downloading a new schedule.");
-				UserPreferences.getXmltvOutputFile().delete();
-				xmltvc.downloadSchedule();
-			}
-			if (tries == 4)
-				throw new RuntimeException(
-				"Couldn't download or parse schedule");
-			System.out.println("Trying to parse schedule...");
-			parsed = xmltvParser.parse();
-			tries++;
-		}*/
 		xmltvParser.parse();
 		schedule = xmltvParser.getSchedule();
-		System.out.println("Schedule parsed correctly.");
 		thread = new Thread(this);
 		thread.start();
 	}
@@ -82,10 +43,8 @@ public class OnAirAndUpcoming extends JPanel implements Runnable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		OnAirAndUpcoming jtv = new OnAirAndUpcoming();//"jTVGuide v2.0");
+		OnAirAndUpcoming jtv = new OnAirAndUpcoming();
 
-		//jtv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//jtv.setSize(1000, 800);
 		jtv.setVisible(true);
 	}
 
@@ -95,12 +54,6 @@ public class OnAirAndUpcoming extends JPanel implements Runnable {
 				this.removeAll();
 				List<Program> lk = schedule.getOnAirPrograms();
 				List<Program> lp = schedule.getUpcomingPrograms();
-				if (lk.size() != counter || lp.size() != counter) {
-					System.out.println(counter);
-					System.out.println(lk.size());
-					System.out.println(lp.size());
-					//throw new RuntimeException("mismatch");
-				}
 
 				this.setLayout(new GridLayout(lk.size() + lp.size(), 2));
 				for (Program p : lk) {
