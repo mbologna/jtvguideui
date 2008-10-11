@@ -13,15 +13,17 @@ package it.unibg.cs.jtvguide.gui;
 import it.unibg.cs.jtvguide.util.SystemProperties;
 import it.unibg.cs.jtvguide.xmltv.UserPreferences;
 import it.unibg.cs.jtvguide.xmltv.XMLTVGrabbersByCountry;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
 import javax.swing.JFileChooser;
-import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
-
+import javax.swing.SwingConstants;
 
 /**
 * This code was edited or generated using CloudGarden's Jigloo
@@ -41,6 +43,16 @@ import javax.swing.LayoutStyle;
  */
 public class Preferences extends javax.swing.JFrame {
 
+	{
+		//Set Look & Feel
+		try {
+			javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+
     /** Creates new form Preferences */
     public Preferences() {
         initComponents();
@@ -55,7 +67,7 @@ public class Preferences extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-    	while (!it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile()
+    	if (!it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile()
 				|| !it.unibg.cs.jtvguide.UserPreferences.getXmltvConfigFile().exists()
 				|| it.unibg.cs.jtvguide.UserPreferences.getXmltvConfigFile().length() == 0) {
 
@@ -63,16 +75,17 @@ public class Preferences extends javax.swing.JFrame {
     		it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
     	}
 
+    	else
+    		it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
+
 
         GroupLayout layout = new GroupLayout((JComponent)getContentPane());
         getContentPane().setLayout(layout);
         jPanel1 = new javax.swing.JPanel();
+        GroupLayout jPanel1Layout = new GroupLayout((JComponent)jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
-        jLabel4 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         GroupLayout jPanel2Layout = new GroupLayout((JComponent)jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -86,8 +99,19 @@ public class Preferences extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("XMLTV Configuration"));
 
         jLabel1.setText("Select your country: ");
+        jPanel1Layout.setVerticalGroup(jPanel1Layout.createSequentialGroup()
+        	.addGap(8)
+        	.addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+        	    .addComponent(jComboBox1, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE)
+        	    .addComponent(jLabel1, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE))
+        	.addContainerGap(20, 20));
+        jPanel1Layout.setHorizontalGroup(jPanel1Layout.createSequentialGroup()
+        	.addContainerGap()
+        	.addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)
+        	.addGap(0, 186, Short.MAX_VALUE)
+        	.addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, 120, GroupLayout.PREFERRED_SIZE)
+        	.addContainerGap());
 
-        String locale = SystemProperties.getSystemLanguage();
         for (XMLTVGrabbersByCountry element : XMLTVGrabbersByCountry.values()) {
             jComboBox1.addItem(element);
             if(element.getCOMMAND().equals(it.unibg.cs.jtvguide.UserPreferences.getXMLTVCommandByCountry()))
@@ -98,65 +122,6 @@ public class Preferences extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-
-        jLabel4.setText("XMLTV Configuration file:");
-
-        jButton3.setText("Choose...");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setText("XMLTV Output file:");
-
-        jButton4.setText("Choose...");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
-                        .addComponent(jButton3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
-                        .addComponent(jButton4)))
-                .addContainerGap())
-        );
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton3, jButton4, jComboBox1});
-
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jButton4))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("XMLTV Preferences"));
         {
@@ -179,10 +144,10 @@ public class Preferences extends javax.swing.JFrame {
         }
         layout.setVerticalGroup(layout.createSequentialGroup()
         	.addContainerGap()
-        	.addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+        	.addComponent(jPanel1, 0, 73, Short.MAX_VALUE)
         	.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-        	.addComponent(jPanel2, 0, 156, Short.MAX_VALUE)
-        	.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+        	.addComponent(jPanel2, 0, 142, Short.MAX_VALUE)
+        	.addGap(23)
         	.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
         	    .addComponent(jButton1, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
         	    .addComponent(jButton5, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
@@ -232,13 +197,13 @@ public class Preferences extends javax.swing.JFrame {
         	.addComponent(jCheckBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
         	.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
         	.addComponent(jCheckBox2, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	.addGap(0, 27, Short.MAX_VALUE)
+        	.addGap(0, 20, GroupLayout.PREFERRED_SIZE)
         	.addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
         	    .addComponent(jLabel2, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
         	    .addComponent(jLabel3, GroupLayout.Alignment.BASELINE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE))
         	.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
         	.addComponent(jSlider1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	.addContainerGap(26, 26));
+        	.addContainerGap(19, 19));
         jPanel2Layout.setHorizontalGroup(jPanel2Layout.createSequentialGroup()
         	.addContainerGap()
         	.addGroup(jPanel2Layout.createParallelGroup()
@@ -250,17 +215,17 @@ public class Preferences extends javax.swing.JFrame {
         	                .addGap(24)))
         	        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
         	        .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	        .addGap(153))
+        	        .addGap(157))
         	    .addGroup(GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
         	        .addComponent(jCheckBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)
-        	        .addGap(16)
+        	        .addGap(20)
         	        .addComponent(jSlider1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)))
-        	.addContainerGap(65, 65));
+        	.addContainerGap(61, 61));
 
         jLabel3.setText(Integer.toString(it.unibg.cs.jtvguide.UserPreferences.getDays())+" days");
 
         pack();
-        this.setSize(377, 361);
+        this.setSize(377, 322);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -282,34 +247,15 @@ public class Preferences extends javax.swing.JFrame {
     	this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        JFileChooser jfc = new JFileChooser(".");
-        int rVal = jfc.showOpenDialog(this);
-        if (rVal == JFileChooser.APPROVE_OPTION) {
-        	it.unibg.cs.jtvguide.UserPreferences.setXmltvConfigFile(jfc.getSelectedFile().getAbsoluteFile().getName());
-            jButton3.setText(jfc.getSelectedFile().getName());
-        }
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        JFileChooser jfc = new JFileChooser(".");
-        int rVal = jfc.showOpenDialog(this);
-        if (rVal == JFileChooser.APPROVE_OPTION) {
-        	it.unibg.cs.jtvguide.UserPreferences.setXmltvOutputFile(jfc.getSelectedFile().getAbsoluteFile().getName());
-        	//UserPreferences.setXmltvOutputFile(jfc.getSelectedFile().getAbsoluteFile());
-            jButton4.setText(jfc.getSelectedFile().getName());
-        }
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-    	if (jCheckBox1.isEnabled())
+    	if (jCheckBox1.isSelected())
     		it.unibg.cs.jtvguide.UserPreferences.setQuiet(true);
     	else
     		it.unibg.cs.jtvguide.UserPreferences.setQuiet(false);
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jCheckBox2ActionPerformed(ActionEvent evt) {
-    	if (jCheckBox2.isEnabled())
+    	if (jCheckBox2.isSelected())
     		it.unibg.cs.jtvguide.UserPreferences.setWithCache(true);
     	else
     		it.unibg.cs.jtvguide.UserPreferences.setWithCache(false);
@@ -321,15 +267,11 @@ public class Preferences extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private JButton jButton5;
     private JButton jButton1;
     private JCheckBox jCheckBox2;

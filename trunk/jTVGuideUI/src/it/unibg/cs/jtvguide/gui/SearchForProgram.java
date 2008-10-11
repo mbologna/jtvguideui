@@ -36,51 +36,14 @@ public class SearchForProgram extends JPanel {
 	JScrollPane scrollPane = new JScrollPane(ja);
 	Schedule schedule;
 
-	public SearchForProgram(){//(String title) {
-		//super(title);
-		//this.add(jp);
+	public SearchForProgram(){
 		setLayout(new BorderLayout());
 		jt.getDocument().addDocumentListener(new MyListener());
-
 		this.add(BorderLayout.NORTH, jt);
 		this.add(BorderLayout.CENTER, scrollPane);
-		XMLTVCommander xmltvc = new XMLTVCommander();
 		XMLTVParserImpl xmltvParser = new XMLTVParserImpl();
-		int tries = 0;
-
-		/*while (!UserPreferences.loadFromXMLFile()
-				|| !UserPreferences.getXmltvConfigFile().exists()
-				|| UserPreferences.getXmltvConfigFile().length() == 0) {
-			System.out.println("Configuring jTVGuide and XMLTV...");
-			xmltvc.configureXMLTV();
-			UserPreferences.saveToXMLFile();
-		}
-
-		boolean parsed = false;
-		while (parsed == false && tries <= 3) {
-			if (!new XMLTVScheduleInspector().isUpToDate()
-					|| !MD5Checksum.checkMD5(UserPreferences
-							.getXmltvConfigFile().toString(), MD5Checksum
-							.readMD5FromFile())) {
-				System.out.println("Updating schedule...");
-				xmltvc.downloadSchedule();
-			}
-			if (tries >= 1) {
-				System.out
-						.println("Couldn't parsing. Downloading a new schedule.");
-				UserPreferences.getXmltvOutputFile().delete();
-				xmltvc.downloadSchedule();
-			}
-			if (tries == 4)
-				throw new RuntimeException(
-						"Couldn't download or parse schedule");
-			System.out.println("Trying to parse schedule...");
-			parsed = xmltvParser.parse();
-			tries++;
-		}*/
 		xmltvParser.parse();
 		schedule = xmltvParser.getSchedule();
-		System.out.println("Schedule parsed correctly.");
 	}
 
 	public static void main(String[] args) {
@@ -89,9 +52,7 @@ public class SearchForProgram extends JPanel {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		SearchForProgram jtv = new SearchForProgram();//"jTVGuide v2.0");
-		//jtv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//jtv.setSize(1000, 800);
+		SearchForProgram jtv = new SearchForProgram();
 		jtv.setVisible(true);
 	}
 
