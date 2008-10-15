@@ -323,10 +323,6 @@ public class Preferences extends javax.swing.JFrame {
     		}
     		System.out.println("Schedule parsed correctly.");
 
-
-
-
-
     		if(parsed)
     		{
     			javax.swing.JPanel jPanelParent1 = new OnAirAndUpcoming();
@@ -346,11 +342,6 @@ public class Preferences extends javax.swing.JFrame {
     	    	javax.swing.JTabbedPane jTabbedPane = (JTabbedPane) jPanel.getComponent(0);
     	    	jTabbedPane.removeAll();
     		}
-
-
-
-
-
 
         }
 
