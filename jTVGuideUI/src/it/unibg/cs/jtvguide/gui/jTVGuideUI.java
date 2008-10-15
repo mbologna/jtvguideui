@@ -64,47 +64,15 @@ public class jTVGuideUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-    	jFrame1 = new javax.swing.JFrame();
     	jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("jTVGuide v1.0");
         setIconImage(Toolkit.getDefaultToolkit().getImage("icons/tv.png"));
-
-        jFrame1.setVisible(false);
-        jFrame1.setTitle("Error!");
-        jFrame1.setPreferredSize(new java.awt.Dimension(238, 159));
-        jFrame1.setIconImage(Toolkit.getDefaultToolkit().getImage("icons/exclaim.png"));
-        jFrame1.getContentPane().setLayout(null);
-        {
-        	jLabel1 = new JLabel();
-        	jFrame1.getContentPane().add(jLabel1);
-        	jLabel1.setText("Resetted configuration file. Tray again.");
-        	jLabel1.setLayout(null);
-        	jLabel1.setBounds(10, 23, 210, 36);
-        	jLabel1.setHorizontalTextPosition(SwingConstants.CENTER);
-        	jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
-        }
-        {
-        	jButton1 = new JButton();
-        	jFrame1.getContentPane().add(jButton1);
-        	jButton1.setText("Ok");
-        	jButton1.setLayout(null);
-        	jButton1.setBounds(61, 81, 108, 23);
-        	jButton1.setHorizontalTextPosition(SwingConstants.CENTER);
-        	jButton1.addActionListener(new java.awt.event.ActionListener() {
-        	    public void actionPerformed(java.awt.event.ActionEvent evt) {
-        	        jButton1ActionPerformed(evt);
-        	    }
-        	});
-        }
-        jFrame1.setSize(238, 159);
 
         jMenu1.setText("File");
 
@@ -130,16 +98,6 @@ public class jTVGuideUI extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem1);
 
-        jMenuItem3.setText("Selezione Canali");
-        jMenuItem3.addActionListener(new SelezionaCanali());
-
-        jMenu2.add(jMenuItem3);
-
-        jMenuItem4.setText("Scarica Programmazione");
-        jMenuItem4.addActionListener(new AggiornaProgrammazione());
-
-        jMenu2.add(jMenuItem4);
-
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -150,13 +108,15 @@ public class jTVGuideUI extends javax.swing.JFrame {
         	jTabbedPane1 = new JTabbedPane();
         	{
         		jPanel1 = new OnAirAndUpcoming();
-        		//FlowLayout jPanel1Layout = new FlowLayout();
         		jTabbedPane1.addTab("OnAirAndUpcoming", null, jPanel1, null);
-        		//jPanel1.setLayout(jPanel1Layout);
         	}
         	{
         		jPanel2 = new SearchForProgram();
         		jTabbedPane1.addTab("SearchForProgram", null, jPanel2, null);
+        	}
+        	{
+        		jPanel3 = new ChannelShow();
+        		jTabbedPane1.addTab("ChannelShow", null, jPanel3, null);
         	}
         }
         layout.setVerticalGroup(layout.createSequentialGroup()
@@ -167,109 +127,14 @@ public class jTVGuideUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-
-protected void jButton1ActionPerformed(ActionEvent evt) {
-		jFrame1.setVisible(false);
-	}
-
 private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
  System.exit(0);
 }//GEN-LAST:event_jMenuItem2ActionPerformed
 
 private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-    Preferences p = new Preferences();
+    Preferences p = new Preferences(this);
     p.setVisible(true);
 }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-
-
-private class SelezionaCanali implements ActionListener, Runnable { //GEN-FIRST:event_jMenuItem3ActionPerformed
-
-	 public void actionPerformed(ActionEvent e) {
-	        Thread t = new Thread(this);
-	        t.start();
-	    }
-
-	public void run() {
-		XMLTVCommander xmltvc = new XMLTVCommander();
-		System.out.println("Configuring jTVGuide and XMLTV...");
-		xmltvc.configureXMLTV();
-	}
-
-}//GEN-LAST:event_jMenuItem3ActionPerformed
-private class AggiornaProgrammazione implements ActionListener, Runnable {
-
-    public void actionPerformed(ActionEvent e) {
-        Thread t = new Thread(this);
-        t.start();
-    }
-
-    public void run() {
-    	XMLTVCommander xmltvc = new XMLTVCommander();
-    	XMLTVParserImpl xmltvParser = new XMLTVParserImpl();
-    	Calendar c = Calendar.getInstance();
-		c.add(Calendar.DATE, it.unibg.cs.jtvguide.UserPreferences.getDays());
-		int tries = 0;
-
-
-		boolean parsed = false;
-		while (parsed == false && tries <= 3) {
-			if (!new XMLTVScheduleInspector().isUpToDate()
-					|| !MD5Checksum.checkMD5(it.unibg.cs.jtvguide.UserPreferences
-							.getXmltvConfigFile().toString(), MD5Checksum
-							.readMD5FromFile())) {
-				if(!it.unibg.cs.jtvguide.UserPreferences.getXmltvConfigFile().exists()){
-					System.out.println("Configuring jTVGuide and XMLTV...");
-					xmltvc.configureXMLTV();
-				}
-				System.out.println("Updating schedule...");
-				it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
-				xmltvc.downloadSchedule();
-			}
-
-			if(!new XMLTVScheduleInspector().isUpToDate(c.getTime()))
-			{
-				System.out.println("Updating schedule...");
-				it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
-				xmltvc.downloadSchedule();
-			}
-
-			if (tries >= 1) {
-				System.out.println("Couldn't parsing. Downloading a new schedule.");
-				it.unibg.cs.jtvguide.UserPreferences.getXmltvOutputFile().delete();
-				xmltvc.downloadSchedule();
-			}
-			if (tries == 4)
-				throw new RuntimeException(
-				"Couldn't download or parse schedule");
-			System.out.println("Trying to parse schedule...");
-			parsed = xmltvParser.parse();
-			tries++;
-		}
-		System.out.println("Schedule parsed correctly.");
-
-		if(parsed)
-		{
-			jTabbedPane1.removeAll();
-			jPanel1 = new OnAirAndUpcoming();
-			jTabbedPane1.addTab("OnAirAndUpcoming", null, jPanel1, null);
-			jPanel2 = new SearchForProgram();
-			jTabbedPane1.addTab("SearchForProgram", null, jPanel2, null);
-		}
-
-		else
-		{
-			it.unibg.cs.jtvguide.UserPreferences.resetXMLFile();
-			jFrame1.setVisible(true);
-		}
-
-
-    }
-
-
-}
-
-
 
     /**
     * @param args the command line arguments
@@ -301,16 +166,12 @@ private class AggiornaProgrammazione implements ActionListener, Runnable {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private JButton jButton1;
-    private JLabel jLabel1;
     private JPanel jPanel2;
+    private JPanel jPanel3;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JFrame jFrame1;
     // End of variables declaration//GEN-END:variables
 
 }
