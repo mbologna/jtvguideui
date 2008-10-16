@@ -11,10 +11,17 @@ import it.unibg.cs.jtvguide.util.SystemProperties;
 import it.unibg.cs.jtvguide.xmltv.XMLTVCommander;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
 import java.awt.BorderLayout;
+import java.awt.Image;
+import java.awt.SystemTray;
+import java.awt.TrayIcon;
 
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -51,12 +58,41 @@ public class jTVGuideUI extends javax.swing.JFrame {
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
+	private SystemTray sysTray;
+	private TrayIcon trayIcon;
 	/**
 	 *
 	 */
-	/** Creates new form jTVGuideUI */
-    public jTVGuideUI() {
+	/** Creates new form jTVGuideUI
+	 * @throws IOException */
+    public jTVGuideUI(){
         initComponents();
+        sysTray = SystemTray.getSystemTray ();
+        Image image = Toolkit.getDefaultToolkit().getImage("icons/tv.png");
+        trayIcon = new TrayIcon (image.getScaledInstance(16, 16, 1),"jTVGuide v1.0");
+
+        addWindowListener (new WindowAdapter ()
+        {
+            public void windowIconified (WindowEvent we)
+            {
+                setVisible (false);
+
+                try {
+                    sysTray.add (trayIcon);
+                } catch (Exception e) { }
+            }
+        });
+
+        trayIcon.addActionListener (new ActionListener ()
+        {
+            public void actionPerformed (ActionEvent ae)
+            {
+                setVisible (true);
+                setState (NORMAL);
+                sysTray.remove (trayIcon);
+            }
+        });
+
     }
 
     /** This method is called from within the constructor to
