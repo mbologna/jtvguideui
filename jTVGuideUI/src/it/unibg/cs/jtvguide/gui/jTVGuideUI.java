@@ -10,6 +10,7 @@ import it.unibg.cs.jtvguide.util.MD5Checksum;
 import it.unibg.cs.jtvguide.util.SystemProperties;
 import it.unibg.cs.jtvguide.xmltv.XMLTVCommander;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
+import java.awt.BorderLayout;
 
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -18,9 +19,12 @@ import java.util.Calendar;
 import java.util.Date;
 
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -68,7 +72,10 @@ public class jTVGuideUI extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("jTVGuide v1.0");
@@ -89,7 +96,7 @@ public class jTVGuideUI extends javax.swing.JFrame {
 
         jMenu2.setText("Tools");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_COMMA, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setText("Preferences...");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,7 +105,28 @@ public class jTVGuideUI extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem1);
 
+        jMenu3.setText("?");
+
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem3.setText("Help");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem4.setText("About");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+
+        jMenu3.add(jMenuItem3);
+        jMenu3.add(jMenuItem4);
         jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -124,8 +152,36 @@ public class jTVGuideUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(layout.createSequentialGroup()
         	.addComponent(jTabbedPane1, 0, 684, Short.MAX_VALUE));
 
+        jDialog1 = getJDialog1();
+        jDialog1.setLocationByPlatform(false);
+        jDialog1.setLocation(new java.awt.Point(100, 100));
+        jDialog1.setVisible(false);
+
+        jDialog2 = getJDialog2();
+        jDialog2.setLocationByPlatform(false);
+        jDialog2.setLocation(new java.awt.Point(100, 100));
+        jDialog2.setPreferredSize(new java.awt.Dimension(414, 253));
+        {
+        	jTextArea1 = new JTextArea();
+        	jDialog2.getContentPane().add(jTextArea1);
+        	jTextArea1.setText("\nPer ottenere la programmazione desiderata seguire la seguente procedura:\n\nTools -> Preferences\n\nSelezionare le preferenze desiderate.\n\n-> Selezione canali\n\nSelezionare i canali di cui si vuole ottenere la programmazione.\n\n-> Ok\n\nIl programma effettuerà il download della programmazione dei canali desiderati.");
+        	jTextArea1.setBounds(0, 0, 406, 219);
+        	jTextArea1.setFont(new java.awt.Font("Tahoma",0,11));
+        	jTextArea1.setEditable(false);
+        }
+        jDialog2.setVisible(false);
+
+
         pack();
     }// </editor-fold>
+
+protected void jMenuItem4ActionPerformed(ActionEvent evt) {
+		jDialog1.setVisible(true);
+	}
+
+protected void jMenuItem3ActionPerformed(ActionEvent evt) {
+		jDialog2.setVisible(true);
+	}
 
 private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
  System.exit(0);
@@ -162,14 +218,77 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
         });
     }
 
+	private JDialog getJDialog1() {
+		if(jDialog1 == null) {
+			jDialog1 = new JDialog(this);
+			jDialog1.setTitle("About");
+			jDialog1.getContentPane().setLayout(null);
+			{
+				jLabel1 = new JLabel();
+				jDialog1.getContentPane().add(jLabel1);
+				jLabel1.setText("jTVGuide e jTVGuideUI have been realized by");
+				jLabel1.setBounds(10, 11, 219, 26);
+				jLabel1.setHorizontalTextPosition(SwingConstants.CENTER);
+				jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
+			}
+			{
+				jLabel2 = new JLabel();
+				jDialog1.getContentPane().add(jLabel2);
+				jLabel2.setText("Michele Bologna");
+				jLabel2.setBounds(81, 43, 76, 14);
+				jLabel2.setHorizontalTextPosition(SwingConstants.CENTER);
+				jLabel2.setHorizontalAlignment(SwingConstants.CENTER);
+			}
+			{
+				jLabel3 = new JLabel();
+				jDialog1.getContentPane().add(jLabel3);
+				jLabel3.setText("and");
+				jLabel3.setHorizontalAlignment(SwingConstants.CENTER);
+				jLabel3.setHorizontalTextPosition(SwingConstants.CENTER);
+				jLabel3.setBounds(81, 68, 76, 14);
+			}
+			{
+				jLabel4 = new JLabel();
+				jDialog1.getContentPane().add(jLabel4);
+				jLabel4.setText("Sebastiano Rota");
+				jLabel4.setHorizontalAlignment(SwingConstants.CENTER);
+				jLabel4.setHorizontalTextPosition(SwingConstants.CENTER);
+				jLabel4.setBounds(65, 93, 109, 14);
+			}
+			jDialog1.setSize(247, 158);
+		}
+		return jDialog1;
+	}
+
+	private JDialog getJDialog2() {
+		if(jDialog2 == null) {
+			jDialog2 = new JDialog(this);
+			jDialog2.getContentPane().setLayout(null);
+			jDialog2.setTitle("Help");
+			jDialog2.setAlwaysOnTop(true);
+			jDialog2.setSize(414, 253);
+		}
+		return jDialog2;
+	}
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
+    private JLabel jLabel4;
+    private JTextArea jTextArea1;
+    private JDialog jDialog2;
+    private JLabel jLabel1;
+    private JDialog jDialog1;
     private JPanel jPanel2;
     private JPanel jPanel3;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
