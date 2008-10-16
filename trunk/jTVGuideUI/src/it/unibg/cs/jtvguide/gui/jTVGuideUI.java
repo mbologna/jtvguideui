@@ -226,8 +226,8 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 			{
 				jLabel1 = new JLabel();
 				jDialog1.getContentPane().add(jLabel1);
-				jLabel1.setText("jTVGuide e jTVGuideUI have been realized by");
-				jLabel1.setBounds(10, 11, 219, 26);
+				jLabel1.setText("jTVGuide and jTVGuideUI have been realized by");
+				jLabel1.setBounds(5, 11, 229, 26);
 				jLabel1.setHorizontalTextPosition(SwingConstants.CENTER);
 				jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
 			}
