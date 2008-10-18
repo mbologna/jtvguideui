@@ -272,7 +272,7 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 			{
 				jLabel1 = new JLabel();
 				jDialog1.getContentPane().add(jLabel1);
-				jLabel1.setText("jTVGuide and jTVGuideUI have been realized by");
+				jLabel1.setText("jTVGuide and jTVGuideUI has been brought to you by");
 				jLabel1.setBounds(5, 11, 229, 26);
 				jLabel1.setHorizontalTextPosition(SwingConstants.CENTER);
 				jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -280,7 +280,7 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 			{
 				jLabel2 = new JLabel();
 				jDialog1.getContentPane().add(jLabel2);
-				jLabel2.setText("Michele Bologna");
+				jLabel2.setText("Michele Bologna <michele.bologna@gmail.com>");
 				jLabel2.setBounds(81, 43, 76, 14);
 				jLabel2.setHorizontalTextPosition(SwingConstants.CENTER);
 				jLabel2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -296,7 +296,7 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 			{
 				jLabel4 = new JLabel();
 				jDialog1.getContentPane().add(jLabel4);
-				jLabel4.setText("Sebastiano Rota");
+				jLabel4.setText("Sebastiano Rota <sebastiano.rota@gmail.com>");
 				jLabel4.setHorizontalAlignment(SwingConstants.CENTER);
 				jLabel4.setHorizontalTextPosition(SwingConstants.CENTER);
 				jLabel4.setBounds(65, 93, 109, 14);
