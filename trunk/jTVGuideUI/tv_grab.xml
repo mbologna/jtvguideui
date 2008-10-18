@@ -2,515 +2,636 @@
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
 
 <tv source-info-url="http://guidatv.sky.it,http://www.mtv.it,http://wfactory.net,http://boingtv.it,http://sitcom1.it" source-data-url="http://guidatv.sky.it/,http://www.mtv.it/tv/palinsesto/index.asp,http://www.wfactory.net/showcase/programmi.jsp,http://www.boingtv.it/palinsesto/dati/palinsesto.xml,http://www.sitcom1.it/guidatv.asp" generator-info-name="XMLTV" generator-info-url="http://membled.com/work/apps/xmltv/">
-  <channel id="www.axn.it">
-    <display-name>AXN</display-name>
-    <display-name>443</display-name>
-    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/443.gif" />
+  <channel id="skysport1.skytv.it">
+    <display-name>Sky Sport 1</display-name>
+    <display-name>920</display-name>
+    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/920.gif" />
   </channel>
-  <channel id="english.aljazeera.net">
-    <display-name>Al Jazeera International</display-name>
-    <display-name>5113</display-name>
-    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/5113.gif" />
+  <channel id="skysport2.skytv.it">
+    <display-name>Sky Sport 2</display-name>
+    <display-name>921</display-name>
+    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/921.gif" />
   </channel>
-  <channel id="www.alice.tv">
-    <display-name>Alice</display-name>
-    <display-name>630</display-name>
-    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/630.gif" />
+  <channel id="skysport3.skytv.it">
+    <display-name>Sky Sport 3</display-name>
+    <display-name>509</display-name>
+    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/509.gif" />
   </channel>
-  <programme start="20081015073500 +0200" stop="20081015083000 +0200" channel="www.axn.it">
-    <title lang="it">Starsky - Hutch</title>
-    <desc lang="it">1977. Quando lo strozzino viene identificato come un serial killer, Starsky e Hutch si domandano cosa stia veramente cercando.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015092000 +0200" stop="20081015101500 +0200" channel="www.axn.it">
-    <title lang="it">Seven Days</title>
-    <desc lang="it">1999. Seven Days racconta le avventure di Frank Parker, un agente segreto alle dipendenze di una misteriosa organizzazione governativa che fa esperimenti con una macchina del tempo.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015101500 +0200" stop="20081015121500 +0200" channel="www.axn.it">
-    <title lang="it">Tutto in una notte</title>
-    <desc lang="it">1985. La vita di Ed Okin e completamente in rovina, fino al giorno in cui incontra Diana. Amore e sfida sono lo sfondo di un intrigo internazionale. Con Michelle Pfeiffer, Jeff Goldblum e Dan Aykroyd.</desc>
-    <category lang="it">Film</category>
-    <category lang="it">Drammatico</category>
-  </programme>
-  <programme start="20081015130000 +0200" stop="20081015140000 +0200" channel="www.axn.it">
-    <title lang="it">Video Danger</title>
-    <desc lang="it">World's Most Amazing Videos: un reality TV show che mostra una serie di video amatoriali di persone che hanno visto quasi la morte direttamente con i propri occhi. I filmati piu incredibili, sul filo</desc>
-    <category lang="it">Show</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015140000 +0200" stop="20081015162000 +0200" channel="www.axn.it">
-    <title lang="it">Fino a prova contraria</title>
-    <desc lang="it">1999. Un reporter con la 'passione' per l'alcool, appena licenziato dal New York Times, scopre l'innocenza di un condannato a morte, solo il giorno prima dell'esecuzione. Con Clint Eastwood e Isaiah</desc>
-    <category lang="it">Film</category>
-    <category lang="it">Thriller</category>
-  </programme>
-  <programme start="20081015192000 +0200" stop="20081015201000 +0200" channel="www.axn.it">
-    <title lang="it">Seven Days</title>
-    <desc lang="it">1999. Seven Days racconta le avventure di Frank Parker, un agente segreto alle dipendenze di una misteriosa organizzazione governativa che fa esperimenti con una macchina del tempo.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015215500 +0200" stop="20081015225000 +0200" channel="www.axn.it">
-    <title lang="it">The Shield</title>
-    <desc lang="it">2007. Shane sta organizzando un piano per proteggere lui e la sua famiglia da qualsiasi pericolo.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015210000 +0200" stop="20081015215500 +0200" channel="www.axn.it">
-    <title lang="it">The Shield</title>
-    <desc lang="it">2007. Mentre Shane rivela le difficolta' interne all'unita' Armena, il team lavora per proteggere un agente da una banda di spacciatori Salvadoregna.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015003000 +0200" stop="20081015012000 +0200" channel="www.axn.it">
-    <title lang="it">Video Danger</title>
-    <desc lang="it">World's Most Amazing Videos: un reality TV show che mostra una serie di video amatoriali di persone che hanno visto quasi la morte direttamente con i propri occhi. I filmati piu incredibili, sul filo</desc>
-    <category lang="it">Show</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015012000 +0200" stop="20081015021500 +0200" channel="www.axn.it">
-    <title lang="it">Most Shocking</title>
-    <desc lang="it">Nuovi comportamenti criminali per Most Shocking: inseguimenti e sparatorie. Il pericolo e lo shock e' lo spettacolo quotidiano in questo 'real tv show'.</desc>
-    <category lang="it">Show</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015021500 +0200" stop="20081015031000 +0200" channel="www.axn.it">
-    <title lang="it">MacGyver</title>
-    <desc lang="it">1988. Tornano le avventure di uno dei volti caratteristici del canale, con le nuove puntate di MacGyver. MacGyver racconta le avventure di un ex agente segreto dalle mille risorse.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015031000 +0200" stop="20081015035500 +0200" channel="www.axn.it">
-    <title lang="it">Sliders</title>
-    <desc lang="it">Colin e Maggi diventano dipendenti di un mondo dove l'uso di droghe e' obbligatorio.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015035500 +0200" stop="20081015044000 +0200" channel="www.axn.it">
-    <title lang="it">Andromeda</title>
-    <desc lang="it">2000. Il fratello di Beka, un truffatore, ricompare all'improvviso sostenendo di essere un devoto Wayist e cosi' Andromeda diventa l'obiettivo principale dell'attacco dei Restor.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015044000 +0200" stop="20081015053500 +0200" channel="www.axn.it">
-    <title lang="it">Starsky - Hutch</title>
-    <desc lang="it">Parte II - 1977. Nel secondo ed ultimo episodio di ""La Peste"", mancano a Hutch solo qualche ore prima di morire, quando Starsky appare in tv per pregare il propagatore del virus di arrendersi.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015053500 +0200" stop="20081015060000 +0200" channel="www.axn.it">
-    <title lang="it">Most Shocking</title>
-    <desc lang="it">Minipillole di quello che resta uno dei programmi 'real tv' piu 'mozzafiato' di AXN.</desc>
-    <category lang="it">Show</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015060000 +0200" stop="20081015064500 +0200" channel="www.axn.it">
-    <title lang="it">Sliders</title>
-    <desc lang="it">Colin e Maggi diventano dipendenti di un mondo dove l'uso di droghe e' obbligatorio.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015064500 +0200" stop="20081015073500 +0200" channel="www.axn.it">
-    <title lang="it">Most Shocking</title>
-    <desc lang="it">Nuovi comportamenti criminali per Most Shocking: inseguimenti e sparatorie. Il pericolo e lo shock e' lo spettacolo quotidiano in questo 'real tv show'.</desc>
-    <category lang="it">Show</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015083000 +0200" stop="20081015092000 +0200" channel="www.axn.it">
-    <title lang="it">MacGyver</title>
-    <desc lang="it">1988. Tornano le avventure di uno dei volti caratteristici del canale, con le nuove puntate di MacGyver. MacGyver racconta le avventure di un ex agente segreto dalle mille risorse.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015121500 +0200" stop="20081015130000 +0200" channel="www.axn.it">
-    <title lang="it">Most Shocking</title>
-    <desc lang="it">Nuovi comportamenti criminali per Most Shocking: inseguimenti e sparatorie. Il pericolo e lo shock e' lo spettacolo quotidiano in questo 'real tv show'.</desc>
-    <category lang="it">Show</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015162000 +0200" stop="20081015164500 +0200" channel="www.axn.it">
-    <title lang="it">Video Danger</title>
-    <desc lang="it">2008.</desc>
-    <category lang="it">Show</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015164500 +0200" stop="20081015174000 +0200" channel="www.axn.it">
-    <title lang="it">MacGyver</title>
-    <desc lang="it">1988. Tornano le avventure di uno dei volti caratteristici del canale, con le nuove puntate di MacGyver. MacGyver racconta le avventure di un ex agente segreto dalle mille risorse.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015174000 +0200" stop="20081015183000 +0200" channel="www.axn.it">
-    <title lang="it">Sliders</title>
-    <desc lang="it">In questa puntata ... Durante una notte tenebrosa e tempestosa, gli Sliders hanno un incontro con i fantasmi del loro albergo.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015183000 +0200" stop="20081015192000 +0200" channel="www.axn.it">
-    <title lang="it">Andromeda</title>
-    <desc lang="it">2000. Dopo 300 anni e un buco nero che li separava, finalmente il Capitano Hunt si ricongiunge con il suo grande amore, Sara.</desc>
-    <category lang="it">Fiction</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015201000 +0200" stop="20081015210000 +0200" channel="www.axn.it">
-    <title lang="it">Most Shocking</title>
-    <desc lang="it">Nuovi comportamenti criminali per Most Shocking: inseguimenti e sparatorie. Il pericolo e lo shock e lo spettacolo quotidiano in questo 'real tv show'.</desc>
-    <category lang="it">Show</category>
-    <category lang="it">Intrattenimento</category>
-  </programme>
-  <programme start="20081015225000 +0200" stop="20081016002500 +0200" channel="www.axn.it">
-    <title lang="it">Scommessa con la morte</title>
-    <desc lang="it">1988. Ritorna l'ispettore Callaghan.</desc>
-    <category lang="it">Film</category>
-    <category lang="it">Drammatico</category>
-  </programme>
-  <programme start="20081015000000 +0200" stop="20081015010000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015010000 +0200" stop="20081015020000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015020000 +0200" stop="20081015030000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015030000 +0200" stop="20081015040000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015040000 +0200" stop="20081015050000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015050000 +0200" stop="20081015060000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015060000 +0200" stop="20081015070000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015070000 +0200" stop="20081015080000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015080000 +0200" stop="20081015090000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015090000 +0200" stop="20081015100000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015100000 +0200" stop="20081015110000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015110000 +0200" stop="20081015120000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015120000 +0200" stop="20081015130000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015130000 +0200" stop="20081015140000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015140000 +0200" stop="20081015150000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015150000 +0200" stop="20081015160000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015160000 +0200" stop="20081015170000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015170000 +0200" stop="20081015180000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015180000 +0200" stop="20081015190000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015190000 +0200" stop="20081015200000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015200000 +0200" stop="20081015210000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015210000 +0200" stop="20081015220000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015220000 +0200" stop="20081015230000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015230000 +0200" stop="20081016000000 +0200" channel="english.aljazeera.net">
-    <title lang="it">Al Jazeera International</title>
-    <desc lang="it">Il primo canale all news internazionale, in lingua inglese, che nasce in Medio Oriente.</desc>
-  </programme>
-  <programme start="20081015003000 +0200" stop="20081015010000 +0200" channel="www.alice.tv">
-    <title lang="it">La gola</title>
-    <desc lang="it">Sui declivi che scendono sulle rive del lago di Garda, la coltivazione di uno degli olii piu' buoni d'Italia</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015020000 +0200" stop="20081015023000 +0200" channel="www.alice.tv">
-    <title lang="it">In punta di coltello</title>
-    <desc lang="it">Fabrizio Nonis e Stefano Sangion ci presentano una ricetta ricca e gustosa, adatta per i periodi di festa</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015023000 +0200" stop="20081015025500 +0200" channel="www.alice.tv">
-    <title lang="it">La gola</title>
-    <desc lang="it">Sui declivi che scendono sulle rive del lago di Garda, la coltivazione di uno degli olii piu' buoni d'Italia</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015030000 +0200" stop="20081015031500 +0200" channel="www.alice.tv">
-    <title lang="it">In tavola</title>
-    <desc lang="it">Lo chef Patrizia Forlin mostra come preparare la polenta ai funghi con soppressa, grana e salsa alla fontina</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015031500 +0200" stop="20081015033000 +0200" channel="www.alice.tv">
-    <title lang="it">In tavola</title>
-    <desc lang="it">Lo chef Matteo Panzanella mostra come preparare il baccala' mantecato con finocchi e polenta</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015033000 +0200" stop="20081015040000 +0200" channel="www.alice.tv">
-    <title lang="it">Dolci &amp; delizie</title>
-    <desc lang="it">Beatrice Bocci e la chef pasticcera Valentina Gigli ci insegnano oggi a preparare a casa i tipici e gustosi biscotti anglosassoni: i cookies.</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015040000 +0200" stop="20081015043000 +0200" channel="www.alice.tv">
-    <title lang="it">Pasta &amp; Fagioli</title>
-    <desc lang="it">Stefano Fagioli e Monica Bianchessi, ci preparano oggi delle tagliatelle con ragu' di agnello, fave e scarola</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015050000 +0200" stop="20081015051500 +0200" channel="www.alice.tv">
-    <title lang="it">In tavola</title>
-    <desc lang="it">Lo chef Matteo Panzanella mostra come preparare una gustosissima crema di zucca, cipolle e code di gamberi</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015051500 +0200" stop="20081015053000 +0200" channel="www.alice.tv">
-    <title lang="it">In tavola</title>
-    <desc lang="it">Lo chef Matteo Panzanella mostra come preparare le capesante in padella ai mandarini</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015060000 +0200" stop="20081015063000 +0200" channel="www.alice.tv">
-    <title lang="it">I menu' di Gianluca</title>
-    <desc lang="it">Gianluca Nosari presenta due ricette molto particolari e gustose: rolle' di vitello e involtini di parmigiano</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015070000 +0200" stop="20081015071500 +0200" channel="www.alice.tv">
-    <title lang="it">In tavola</title>
-    <desc lang="it">Lo chef Fabio Campoli prepara una versione insolita ma gustosa della torta di mele: torta di mele in gelatina</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015071500 +0200" stop="20081015073000 +0200" channel="www.alice.tv">
-    <title lang="it">In tavola</title>
-    <desc lang="it">Lo chef Fabio Campoli prepara la torta di carote e mandorle</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015080000 +0200" stop="20081015083000 +0200" channel="www.alice.tv">
-    <title lang="it">I menu' di Gianluca</title>
-    <desc lang="it">Pomodori con riso e mascarpone e scorfano saporito: queste le ricette di oggi per la cucina del nostro chef Gianluca Nosari</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015083000 +0200" stop="20081015090000 +0200" channel="www.alice.tv">
-    <title lang="it">Pasta &amp; Fagioli</title>
-    <desc lang="it">Stefano Fagioli e Monica Bianchessi, ci preparano oggi dei rustici, ma squisiti, zampetti di maiale fritti</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015100000 +0200" stop="20081015103000 +0200" channel="www.alice.tv">
-    <title lang="it">In punta di coltello</title>
-    <desc lang="it">Fabrizio Nonis e Stefano Sangion ci presentano una ricetta ricca e gustosa, adatta per i periodi di festa</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015103000 +0200" stop="20081015110000 +0200" channel="www.alice.tv">
-    <title lang="it">Dolci &amp; delizie</title>
-    <desc lang="it">Beatrice Bocci e la chef pasticcera Valentina Gigli ci insegnano oggi a preparare mille divertenti decorazioni per i nostri dolci</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015110000 +0200" stop="20081015120000 +0200" channel="www.alice.tv">
-    <title lang="it">Uno in cucina</title>
-    <desc lang="it">Parte terza - Valentina Arrigo e Paolo Cacciani ci presentano modi originali per preparare ricette col baccala'</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015120000 +0200" stop="20081015123000 +0200" channel="www.alice.tv">
-    <title lang="it">I menu' di Gianluca</title>
-    <desc lang="it">Oggi il nostro chef Gianluca Nosari propone il suo accattivante menu': Sella di agnello ai tre pepi e dolce di yogurt e cocco</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015123000 +0200" stop="20081015133000 +0200" channel="www.alice.tv">
-    <title lang="it">Facile cucina</title>
-    <desc lang="it">Anche oggi Ciro ed Elis ci preparano delle ricette fantastiche, con qualche ingrediente etnico da utilizzare nella cucina di tutti i giorni! Oggi cous cous</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015150000 +0200" stop="20081015153000 +0200" channel="www.alice.tv">
-    <title lang="it">Dolci &amp; delizie</title>
-    <desc lang="it">Beatrice Bocci e la chef pasticcera Valentina Gigli preparano per noi il Profiterole,partendo dalla preparazione della pasta Choux e della crema pasticcera</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015153000 +0200" stop="20081015160000 +0200" channel="www.alice.tv">
-    <title lang="it">In punta di coltello</title>
-    <desc lang="it">Fabrizio Nonis e Stefano Sangion ci presentano una ricetta ricca e gustosa, adatta per i periodi di festa</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015160000 +0200" stop="20081015163000 +0200" channel="www.alice.tv">
-    <title lang="it">Pasta &amp; Fagioli</title>
-    <desc lang="it">Stefano Fagioli e Monica Bianchessi, ci preparano oggi una ricca faraona ripiena</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015173000 +0200" stop="20081015183000 +0200" channel="www.alice.tv">
-    <title lang="it">Facile cucina</title>
-    <desc lang="it">Ciro ed Elis preparano tutte ricette con il pollo: con radicchio, alla catalana. Il giovane chef Francesco Saggese cucinera' un involtino di pollo</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015183000 +0200" stop="20081015190000 +0200" channel="www.alice.tv">
-    <title lang="it">I menu' di Gianluca</title>
-    <desc lang="it">Oggi Gianluca Nosari ci presenta due ricette facili e gustose: involtini tirolesi e semifreddo al caffe' e mascarpone</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015200000 +0200" stop="20081015203000 +0200" channel="www.alice.tv">
-    <title lang="it">Il club delle cuoche</title>
-    <desc lang="it">Nel suo casale del Mugello Luisanna Messeri ci presenta un goloso tortino di cioccolato, con la complicita' di Lucia Poli e della figlia di Luisanna, Maddalena</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015220000 +0200" stop="20081015223000 +0200" channel="www.alice.tv">
-    <title lang="it">Dolci &amp; delizie</title>
-    <desc lang="it">Beatrice Bocci e la chef pasticcera Valentina Gigli preparano oggi per noi un biscotto savoiardo al cioccolato</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015223000 +0200" stop="20081015230000 +0200" channel="www.alice.tv">
-    <title lang="it">I menu' di Gianluca</title>
-    <desc lang="it">Nel menu' di Gianluca Nosari di oggi due ricette di grande effetto: farfalle con ragu' napoletano e scottona con riduzione all'aceto</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015230000 +0200" stop="20081015233000 +0200" channel="www.alice.tv">
-    <title lang="it">Il club delle cuoche</title>
-    <desc lang="it">Un antipasto molto particolare oggi per Luisanna e Lucia, nello splendido verde della campagna del Mugello, in compagnia di Maddalena. Prugne rivestite al forno</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015233000 +0200" stop="20081016000000 +0200" channel="www.alice.tv">
-    <title lang="it">In punta di coltello</title>
-    <desc lang="it">Prima i segreti del taglio di oggi, poi una gustosa ricetta: girello lardellato alle erbe mediterranee con contorno di patate alla paprika</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015000000 +0200" stop="20081015003000 +0200" channel="www.alice.tv">
-    <title lang="it">Mattia: detto fatto!</title>
-    <desc lang="it">Oggi Mattia Poggi ci presenta due ricette con l'orata: prima un'orata la forno e poi l'orata al cartoccio. Con la sua cucina tutto sara' piu' facile</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015010000 +0200" stop="20081015012000 +0200" channel="www.alice.tv">
-    <title lang="it">Cioccolato che passione!</title>
-    <desc lang="it">I parte - In questa puntata Corinne Clery ci accompagna in un viaggio avvolgente ed aromatico nell'universo del cioccolato fondente</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015013000 +0200" stop="20081015020000 +0200" channel="www.alice.tv">
-    <title lang="it">Sapori di casa (mia)</title>
-    <desc lang="it">II parte - La cucina di Antonella e' una vera sorpresa: prodotti genuini reperiti dal suo socio Luigi</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015043000 +0200" stop="20081015045000 +0200" channel="www.alice.tv">
-    <title lang="it">Mattia: detto fatto!</title>
-    <desc lang="it">Oggi Mattia Poggi ci presenta due ricette con l'orata: prima un'orata la forno e poi l'orata al cartoccio. Con la sua cucina tutto sara' piu' facile</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015053000 +0200" stop="20081015060000 +0200" channel="www.alice.tv">
-    <title lang="it">Sapori di casa (mia)</title>
-    <desc lang="it">I parte - Il Postale, voluto e realizzato da Marco Bistarelli e sua moglie Barbara</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015073000 +0200" stop="20081015080000 +0200" channel="www.alice.tv">
-    <title lang="it">Mattia: detto fatto!</title>
-    <desc lang="it">Oggi Mattia Poggi ci presenta due ricette con l'orata: prima un'orata la forno e poi l'orata al cartoccio. Con la sua cucina tutto sara' piu' facile</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015090000 +0200" stop="20081015095000 +0200" channel="www.alice.tv">
-    <title lang="it">Casa Alice</title>
-    <desc lang="it">Franca Rizzi ospita oggi un vecchio amico appassionato della pizza: Orazio Iannuzzi</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015140000 +0200" stop="20081015150000 +0200" channel="www.alice.tv">
-    <title lang="it">Casa Alice</title>
-    <desc lang="it">Franca Rizzi accoglie nella sua casa il suo macellaio preferito: Annibale Matroddi</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015163000 +0200" stop="20081015170000 +0200" channel="www.alice.tv">
-    <title lang="it">Sapori di casa (mia)</title>
-    <desc lang="it">II parte - Il Postale, voluto e realizzato da Marco Bistarelli e sua moglie Barbara</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015170000 +0200" stop="20081015173000 +0200" channel="www.alice.tv">
-    <title lang="it">Mattia: detto fatto!</title>
-    <desc lang="it">Oggi Mattia Poggi ci presenta due ricette con l'orata: prima un'orata la forno e poi l'orata al cartoccio. Con la sua cucina tutto sara' piu' facile</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015190000 +0200" stop="20081015200000 +0200" channel="www.alice.tv">
-    <title lang="it">Casa Alice</title>
-    <desc lang="it">Franca Rizzi ospita oggi lo chef Cristian Bertoni e il vecchio amico Paolo Cacciani</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015203000 +0200" stop="20081015210000 +0200" channel="www.alice.tv">
-    <title lang="it">Mattia: detto fatto!</title>
-    <desc lang="it">Mattia Poggi ci insegna una ricetta speciale, il sugo di rancetto. Ottimo per condire la pasta, lo vedremo in due versioni. Ci stupira' con effetti speciali</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015213000 +0200" stop="20081015220000 +0200" channel="www.alice.tv">
-    <title lang="it">Sapori di casa (mia)</title>
-    <desc lang="it">I parte - odotti eccellenti e maestria nella loro trasformazione sono i punti di forza dello chef Paolo Tizzanini</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015065500 +0200" stop="20081015070000 +0200" channel="www.alice.tv">
-    <title lang="it">In tavola</title>
-    <desc lang="it">Lo chef Francesca Riganati prepara le costolette con salsa alla menta</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015045000 +0200" stop="20081015050000 +0200" channel="www.alice.tv">
-    <title lang="it">In tavola</title>
-    <desc lang="it">Lo chef Francesca Riganati prepara le farfalle con melanzane e scampi</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015025500 +0200" stop="20081015030000 +0200" channel="www.alice.tv">
-    <title lang="it">In tavola</title>
-    <desc lang="it">Lo chef Francesca Riganati prepara gli spaghetti con zucchine, speck e zafferano</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015012000 +0200" stop="20081015013000 +0200" channel="www.alice.tv">
-    <title lang="it">La Gola in tasca</title>
-    <desc lang="it">In riva al fiume Santa Susanna Marco Rossetti ha scovato un ristorante che offre piacevoli tentazioni gastronomiche</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015095000 +0200" stop="20081015100000 +0200" channel="www.alice.tv">
-    <title lang="it">La Gola in tasca</title>
-    <desc lang="it">Nella mitica terra delle sirene, un ristorante ha incantato il nostro Marco Rossetti</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015133000 +0200" stop="20081015140000 +0200" channel="www.alice.tv">
-    <title lang="it">Pane che passione</title>
-    <desc lang="it">In compagnia di Rosaria Renna conosceremo tutti i segreti dei pani 'famosi': il pane di Genzano IGP; il pane DOP di Altamura e l'internazionale baguette</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015210000 +0200" stop="20081015213000 +0200" channel="www.alice.tv">
-    <title lang="it">Pane che passione</title>
-    <desc lang="it">Oggi Rosaria Renna ci accompagna nel mondo delle farine alternative. Con Gabriele Bonci scopriremo tutti i segreti del pane fatto con i grani di una volta</desc>
-    <category lang="it">Lifestyle</category>
-  </programme>
-  <programme start="20081015063000 +0200" stop="20081015065500 +0200" channel="www.alice.tv">
-    <title lang="it">Pane che passione</title>
-    <desc lang="it">In compagnia di Rosaria Renna entriamo nel fragrante mondo del pane per conoscere quando , dove, come e' nato e per scoprire tutti i segreti per farlo a casa</desc>
-    <category lang="it">Lifestyle</category>
+  <channel id="skysportextra.skytv.it">
+    <display-name>SKY Sport Extra</display-name>
+    <display-name>625</display-name>
+    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/625.gif" />
+  </channel>
+  <channel id="skysporthd1.skytv.it">
+    <display-name>SKY Sport HD1</display-name>
+    <display-name>20</display-name>
+    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/20.gif" />
+  </channel>
+  <channel id="skysporthd2.skytv.it">
+    <display-name>SKY Sport HD2</display-name>
+    <display-name>33</display-name>
+    <icon src="http://guidatv.sky.it//static/epg/timeline/channel_icon/33.gif" />
+  </channel>
+  <programme start="20081018003000 +0200" stop="20081018010000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Fantascudetto TV</title>
+    <desc lang="it">Il fantacalcio di SKY.it e' alla sua seconda edizione. Aggiornamenti sulle classifiche del gioco e sul valore dei calciatori.</desc>
+    <category lang="it">Sport</category>
+  </programme>
+  <programme start="20081018000000 +0200" stop="20081018003000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Special100one</title>
+    <desc lang="it">Uno spazio dedicato ai sostenitori della formazione nerazzurra con highlights, goal, e interviste.</desc>
+    <category lang="it">Sport</category>
+  </programme>
+  <programme start="20081018030000 +0200" stop="20081018033000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Special100one</title>
+    <desc lang="it">Uno spazio dedicato ai sostenitori della formazione nerazzurra con highlights, goal, e interviste.</desc>
+    <category lang="it">Sport</category>
+  </programme>
+  <programme start="20081018033000 +0200" stop="20081018051500 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Juventus - Palermo</title>
+    <desc lang="it">6a giornata. Il massimo campionato calcistico italiano a venti squadre. Le ultime tre retrocedono in serie B. Nella passata stagione l'Inter ha conquistato il suo sedicesimo scudetto.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018051500 +0200" stop="20081018070000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Cagliari - Milan</title>
+    <desc lang="it">Posticipo 6a giornata. Emozioni, gol, tattica, tecnica, tifo. Tutto questo nella massima serie del campionato piu' bello del mondo con venti squadre.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018070000 +0200" stop="20081018073000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Special100one</title>
+    <desc lang="it">Uno spazio dedicato ai sostenitori della formazione nerazzurra con highlights, goal, e interviste.</desc>
+    <category lang="it">Sport</category>
+  </programme>
+  <programme start="20081018073000 +0200" stop="20081018080000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Futbol Mundial</title>
+    <desc lang="it">Le immagini piu' spettacolari del calcio internazionale, con un occhio di riguardo ai campionati tedesco, inglese ed italiano.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018080000 +0200" stop="20081018083000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Fantascudetto TV</title>
+    <desc lang="it">Il fantacalcio di SKY.it e' alla sua seconda edizione. Aggiornamenti sulle classifiche del gioco e sul valore dei calciatori.</desc>
+    <category lang="it">Sport</category>
+  </programme>
+  <programme start="20081018083000 +0200" stop="20081018090000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Special100one</title>
+    <desc lang="it">Uno spazio dedicato ai sostenitori della formazione nerazzurra con highlights, goal, e interviste.</desc>
+    <category lang="it">Sport</category>
+  </programme>
+  <programme start="20081018100000 +0200" stop="20081018103000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Preview Show Premier League</title>
+    <desc lang="it">Anteprima della giornata di Premier League. Gol ma non solo: tecnica e tattica, pressing e agonismo, nel calcio inglese.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018123000 +0200" stop="20081018130000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Fantascudetto TV</title>
+    <desc lang="it">Il fantacalcio di SKY.it e' alla sua seconda edizione. Aggiornamenti sulle classifiche del gioco e sul valore dei calciatori.</desc>
+    <category lang="it">Sport</category>
+  </programme>
+  <programme start="20081018130000 +0200" stop="20081018133000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Special100one</title>
+    <desc lang="it">Uno spazio dedicato ai sostenitori della formazione nerazzurra con highlights, goal, e interviste.</desc>
+    <category lang="it">Sport</category>
+  </programme>
+  <programme start="20081018154500 +0200" stop="20081018155500 +0200" channel="skysport1.skytv.it">
+    <title lang="it">SKY Studio (live)</title>
+    <desc lang="it">I commenti in studio prima e dopo il programma sportivo.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018193000 +0200" stop="20081018202500 +0200" channel="skysport1.skytv.it">
+    <title lang="it">SKY Calcio prepartita (live)</title>
+    <desc lang="it">Conto alla rovescia verso il calcio di inizio delle partite. In diretta dallo studio, ultime novita' sulle formazioni, interviste ai protagonisti e analisi approfondite sulle due squadre in campo.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018202500 +0200" stop="20081018223000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Napoli - Juventus (live)</title>
+    <desc lang="it">Anticipo 7a giornata. Emozioni, gol, tattica, tecnica, tifo. Tutto questo nella massima serie del campionato piu' bello del mondo con venti squadre.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018223000 +0200" stop="20081018231500 +0200" channel="skysport1.skytv.it">
+    <title lang="it">SKY Calcio postpartita (live)</title>
+    <desc lang="it">A pochi minuti dal fischio finale, analisi approfondita delle piu' importanti azioni di gioco, con interviste ai protagonisti.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018010000 +0200" stop="20081018013000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Inter - Roma</title>
+    <desc lang="it">25a giornata. Emozioni, gol, tattica, tecnica, tifo. Tutto questo nella massima serie del campionato piu' bello del mondo con venti squadre.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018013000 +0200" stop="20081018020000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Sampdoria - Milan</title>
+    <desc lang="it">10a giornata. Emozioni, gol, tattica, tecnica, tifo. Tutto questo nella massima serie del campionato piu' bello del mondo con venti squadre.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018020000 +0200" stop="20081018023000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Inter - Roma</title>
+    <desc lang="it">25a giornata. Emozioni, gol, tattica, tecnica, tifo. Tutto questo nella massima serie del campionato piu' bello del mondo con venti squadre.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018023000 +0200" stop="20081018030000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Fiorentina - Juventus</title>
+    <desc lang="it">Posticipo 1a giornata. Emozioni, gol, tattica, tecnica, tifo. Tutto questo nella massima serie del campionato piu' bello del mondo con venti squadre.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018090000 +0200" stop="20081018100000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">I Signori del Calcio: Kaka'</title>
+    <desc lang="it">I migliori gol dei grandi cannonieri del calcio italiano ed internazionale.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018180000 +0200" stop="20081018181500 +0200" channel="skysport1.skytv.it">
+    <title lang="it">SKY Studio (live)</title>
+    <desc lang="it">I commenti in studio prima e dopo il programma sportivo.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018181500 +0200" stop="20081018193000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Karlsruher - Bayern M.</title>
+    <desc lang="it">8a giornata. Le sfide piu' emozionanti del massimo campionato di calcio tedesco. Nella stagione 2007/08 ha vinto il titolo il Bayern Monaco.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018231500 +0200" stop="20081019000000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">SuperClub</title>
+    <desc lang="it">Uno spazio dedicato ai tifosi di calcio con i migliori servizi proposti durante la settimana all'interno delle rubriche riservate a Roma, Napoli, Juventus, Milan e Inter.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018155500 +0200" stop="20081018180000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Arsenal - Everton (Live)</title>
+    <desc lang="it">8a giornata. Le piu' belle partite della Premier League. Al termine della stagione 2007/08 ha vinto il titolo il Manchester United.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018134000 +0200" stop="20081018154500 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Inverness - Celtic</title>
+    <desc lang="it">9a giornata. Le partite piu' belle del massimo campionato scozzese. Nella passata stagione ha vinto il titolo il Celtic Glasgow.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018103000 +0200" stop="20081018123000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">Inter - Bologna</title>
+    <desc lang="it">Anticipo 6a giornata. Emozioni, gol, tattica, tecnica, tifo. Tutto questo nella massima serie del campionato piu' bello del mondo con venti squadre.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018133000 +0200" stop="20081018134000 +0200" channel="skysport1.skytv.it">
+    <title lang="it">SKY Studio (live)</title>
+    <desc lang="it">I commenti in studio prima e dopo il programma sportivo.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018205500 +0200" stop="20081018230000 +0200" channel="skysport2.skytv.it">
+    <title lang="it">Basket: Bologna - L. Roma (live)</title>
+    <desc lang="it">Le migliori partite del campionato di serie A maschile. Nella stagione 2007/08 ha vinto il Montepaschi Siena.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Basket</category>
+  </programme>
+  <programme start="20081018233000 +0200" stop="20081019000000 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 Qualifiche: GP di Cina</title>
+    <desc lang="it">I piloti del mondiale si sfidano per ottenere la Pole Position.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018025000 +0200" stop="20081018044500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 Prove libere: GP di Cina</title>
+    <desc lang="it">Le prove libere servono a trovare il miglior assetto per la gara, ma non hanno valore per definire la griglia di partenza.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018044500 +0200" stop="20081018045500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 Pre Prove (live)</title>
+    <desc lang="it">Sky migliora la tua visione della F1! Se possiedi il decoder HD, prova subito la qualita' superiore delle immagini su Sky Sport HD (canali 207 e 208).</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018045500 +0200" stop="20081018061500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 Prove libere: GP di Cina (live)</title>
+    <desc lang="it">Sky migliora la tua visione della F1! Se possiedi il decoder HD, prova subito la qualita' superiore delle immagini su Sky Sport HD (canali 207 e 208).</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018064500 +0200" stop="20081018074500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 Prove libere: GP di Cina</title>
+    <desc lang="it">Le prove libere servono a trovare il miglior assetto per la gara, ma non hanno valore per definire la griglia di partenza.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018074500 +0200" stop="20081018075500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 Pre Qualifiche (live)</title>
+    <desc lang="it">Sky migliora la tua visione della F1! Se possiedi il decoder HD, prova subito la qualita' superiore delle immagini su Sky Sport HD (canali 207 e 208).</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018075500 +0200" stop="20081018093000 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 Qualifiche: GP di Cina (live)</title>
+    <desc lang="it">Sky migliora la tua visione della F1! Se possiedi il decoder HD, prova subito la qualita' superiore delle immagini su Sky Sport HD (canali 207 e 208).</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018113000 +0200" stop="20081018131500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">WWE Raw Domestic</title>
+    <desc lang="it">Gli appassionati di questa disciplina possono seguire l'appuntamento con i campioni della WWE Raw nella versione integrale senza tagli.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Wrestling</category>
+  </programme>
+  <programme start="20081018131500 +0200" stop="20081018142500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 Qualifiche: GP di Cina</title>
+    <desc lang="it">I piloti del mondiale si sfidano per ottenere la Pole Position.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018142500 +0200" stop="20081018162500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">Rugby: Benetton TV - L. Tigers (live)</title>
+    <desc lang="it">Ventiquattro squadre, suddivise in sei gruppi da quattro, prendono parte alla piu' importante Coppa Europea di rugby.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Rugby</category>
+  </programme>
+  <programme start="20081018162500 +0200" stop="20081018182500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">Volley: Castellana G. - F. Bergamo...</title>
+    <desc lang="it">22 giornate di Regular Season. Poi playoff e finale al meglio delle 5 partite. Campione in carica Scavolini Pesaro.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Altri</category>
+  </programme>
+  <programme start="20081018182500 +0200" stop="20081018203000 +0200" channel="skysport2.skytv.it">
+    <title lang="it">Volley: T.Modena - Sisley TV (live)</title>
+    <desc lang="it">Le partite piu' emozionanti del campionato di serie A1 maschile di volley. Nella stagione 2007/08 ha vinto lo scudetto Itas Dieatec Trentino.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Altri</category>
+  </programme>
+  <programme start="20081018203000 +0200" stop="20081018205500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">SKY Basket Prepartita (live)</title>
+    <desc lang="it">Ultime novita' sulle formazioni, interviste ai protagonisti e analisi approfondita delle due squadre, in diretta dal campo.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Basket</category>
+  </programme>
+  <programme start="20081018001500 +0200" stop="20081018010000 +0200" channel="skysport2.skytv.it">
+    <title lang="it">Poker: After Dark</title>
+    <desc lang="it">Appuntamento con i grandi protagonisti seduti al tavolo verde.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Altri</category>
+  </programme>
+  <programme start="20081018010000 +0200" stop="20081018011500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">Racing: Ep. 26</title>
+    <desc lang="it">Spettacolo ed emozioni nel mondo dei motori.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018011500 +0200" stop="20081018025000 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 Prove libere: GP di Cina</title>
+    <desc lang="it">Le prove libere servono a trovare il miglior assetto per la gara, ma non hanno valore per definire la griglia di partenza.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018100000 +0200" stop="20081018110000 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 Qualifiche: GP di Cina</title>
+    <desc lang="it">I piloti del mondiale si sfidano per ottenere la Pole Position.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018061500 +0200" stop="20081018064500 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 GP Storico: GP di Cina 2006</title>
+    <desc lang="it">Le emozionanti immagini che hanno fatto la storia della Formula 1.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018093000 +0200" stop="20081018100000 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 GP Storico: GP di Cina 2004</title>
+    <desc lang="it">Le emozionanti immagini che hanno fatto la storia della Formula 1.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018110000 +0200" stop="20081018113000 +0200" channel="skysport2.skytv.it">
+    <title lang="it">F1 GP Storico: GP di Cina 2006</title>
+    <desc lang="it">Le emozionanti immagini che hanno fatto la storia della Formula 1.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018230000 +0200" stop="20081018233000 +0200" channel="skysport2.skytv.it">
+    <title lang="it">R &amp; B</title>
+    <desc lang="it">Ep. 1</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Basket</category>
+  </programme>
+  <programme start="20081018000000 +0200" stop="20081018020000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Tennis: Masters Series Madrid</title>
+    <desc lang="it">L'anno scorso ha vinto l'argentino David Nalbandian che ha battuto in finale lo svizzero Roger Federer per 1-6 6-3 6-3.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018080000 +0200" stop="20081018083500 +0200" channel="skysport3.skytv.it">
+    <title lang="it">PGA European Tour Weekly</title>
+    <desc lang="it">Le immagini piu' spettacolari dell'European Tour, il circuito professionistico piu' importante al mondo dopo il Pga americano.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Golf</category>
+  </programme>
+  <programme start="20081018133000 +0200" stop="20081018153000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Tennis: Masters Series Madrid (live)</title>
+    <desc lang="it">L'anno scorso ha vinto l'argentino David Nalbandian che ha battuto in finale lo svizzero Roger Federer per 1-6 6-3 6-3.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018153000 +0200" stop="20081018160000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Atp Tour Magazine</title>
+    <desc lang="it">Aggiornamenti sui tornei della settimana appena trascorsa e ultime notizie sui campioni che partecipano al circuito Atp di tennis: immagini, interviste, profili e classifiche aggiornate.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018160000 +0200" stop="20081018175500 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Tennis: Masters Series Madrid (live)</title>
+    <desc lang="it">L'anno scorso ha vinto l'argentino David Nalbandian che ha battuto in finale lo svizzero Roger Federer per 1-6 6-3 6-3.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018182500 +0200" stop="20081018203000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Manchester Utd - West Bromwich (live)</title>
+    <desc lang="it">8a giornata. Le piu' belle partite della Premier League. Al termine della stagione 2007/08 ha vinto il titolo il Manchester United.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018221500 +0200" stop="20081019000000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Atl. Madrid - Real Madrid</title>
+    <desc lang="it">7a giornata. Le emozionanti sfide el massimo torneo di calcio spagnolo. Nella stagione 2007/08 il titolo di campione di Spagna e' stato conquistato dal Real Madrid.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018060000 +0200" stop="20081018070000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Basket: Lottomatica Roma - Eldo Caserta</title>
+    <desc lang="it">Le migliori partite del campionato di serie A maschile. Nella stagione 2007/08 ha vinto il Montepaschi Siena.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Basket</category>
+  </programme>
+  <programme start="20081018070000 +0200" stop="20081018073000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Icarus</title>
+    <desc lang="it">Lo sport visto come fatica e avventura oltre i limiti. Le spettacolari immagini raccontano le straordinarie sfide dell'uomo.</desc>
+    <category lang="it">Sport</category>
+  </programme>
+  <programme start="20081018103000 +0200" stop="20081018120000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Tennis: Masters Series Madrid</title>
+    <desc lang="it">L'anno scorso ha vinto l'argentino David Nalbandian che ha battuto in finale lo svizzero Roger Federer per 1-6 6-3 6-3.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018120000 +0200" stop="20081018133000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Tennis: Masters Series Madrid</title>
+    <desc lang="it">L'anno scorso ha vinto l'argentino David Nalbandian che ha battuto in finale lo svizzero Roger Federer per 1-6 6-3 6-3.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018203000 +0200" stop="20081018221500 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Tennis: Masters Series Madrid</title>
+    <desc lang="it">L'anno scorso ha vinto l'argentino David Nalbandian che ha battuto in finale lo svizzero Roger Federer per 1-6 6-3 6-3.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018175500 +0200" stop="20081018182500 +0200" channel="skysport3.skytv.it">
+    <title lang="it">F1 Qualifiche: GP di Cina</title>
+    <desc lang="it">I piloti del mondiale si sfidano per ottenere la Pole Position.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018083500 +0200" stop="20081018103000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Rugby: Canterbury - Hawke's Bay (live)</title>
+    <desc lang="it">Il campionato con le squadre che rappresentano le 26 province della Nuova Zelanda. Auckland e' campione in carica.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Rugby</category>
+  </programme>
+  <programme start="20081018040000 +0200" stop="20081018060000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Tennis: Masters Series Madrid</title>
+    <desc lang="it">L'anno scorso ha vinto l'argentino David Nalbandian che ha battuto in finale lo svizzero Roger Federer per 1-6 6-3 6-3.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018020000 +0200" stop="20081018040000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Tennis: Masters Series Madrid</title>
+    <desc lang="it">L'anno scorso ha vinto l'argentino David Nalbandian che ha battuto in finale lo svizzero Roger Federer per 1-6 6-3 6-3.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018073000 +0200" stop="20081018080000 +0200" channel="skysport3.skytv.it">
+    <title lang="it">Momenti di Golf</title>
+    <desc lang="it">Approfondimento sulle gare internazionali dei grandi campioni.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Golf</category>
+  </programme>
+  <programme start="20081018010500 +0200" stop="20081018060000 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">SKY Sport Extra</title>
+    <desc lang="it">In occasione di piu' di tre eventi sportivi in diretta in contemporanea, si accende SKY Sport Extra.</desc>
+  </programme>
+  <programme start="20081018150000 +0200" stop="20081018190000 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Golf: Pga European Tour (live)</title>
+    <desc lang="it">Il golf professionistico europeo e' secondo solo a quello americano. Immagini e risultati dei tornei piu' importanti.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Golf</category>
+  </programme>
+  <programme start="20081018190000 +0200" stop="20081018193000 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Momenti di Golf</title>
+    <desc lang="it">Approfondimento sulle gare internazionali dei grandi campioni.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Golf</category>
+  </programme>
+  <programme start="20081018210000 +0200" stop="20081018230000 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Golf: Pga European Tour</title>
+    <desc lang="it">Il golf professionistico europeo e' secondo solo a quello americano. Immagini e risultati dei tornei piu' importanti.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Golf</category>
+  </programme>
+  <programme start="20081018060000 +0200" stop="20081018074500 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Tennis: Masters Series Madrid</title>
+    <desc lang="it">L'anno scorso ha vinto l'argentino David Nalbandian che ha battuto in finale lo svizzero Roger Federer per 1-6 6-3 6-3.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018074500 +0200" stop="20081018094500 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Tennis: Masters Series Madrid</title>
+    <desc lang="it">L'anno scorso ha vinto l'argentino David Nalbandian che ha battuto in finale lo svizzero Roger Federer per 1-6 6-3 6-3.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Tennis</category>
+  </programme>
+  <programme start="20081018094500 +0200" stop="20081018111500 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Pallamano: Gammadue S. - A.Siracusa</title>
+    <desc lang="it">Otto squadre prendono parte al massimo campionato italiano di pallamano.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Altri</category>
+  </programme>
+  <programme start="20081018113000 +0200" stop="20081018133000 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Rugby: Canterbury - Hawke's Bay</title>
+    <desc lang="it">Il campionato con le squadre che rappresentano le 26 province della Nuova Zelanda. Auckland e' campione in carica.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Rugby</category>
+  </programme>
+  <programme start="20081018133000 +0200" stop="20081018143000 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Golf: Pga European Tour</title>
+    <desc lang="it">Il golf professionistico europeo e' secondo solo a quello americano. Immagini e risultati dei tornei piu' importanti.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Golf</category>
+  </programme>
+  <programme start="20081018143000 +0200" stop="20081018150000 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Golf: Italian Pro Tour</title>
+    <desc lang="it">Occhi puntati sui campioni del circuito italiano di golf.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Golf</category>
+  </programme>
+  <programme start="20081018193000 +0200" stop="20081018200000 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Icarus</title>
+    <desc lang="it">Lo sport visto come fatica e avventura oltre i limiti. Le spettacolari immagini raccontano le straordinarie sfide dell'uomo.</desc>
+    <category lang="it">Sport</category>
+  </programme>
+  <programme start="20081018200000 +0200" stop="20081018210000 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">SKY Sport Extra</title>
+    <desc lang="it">In occasione di piu' di tre eventi sportivi in diretta in contemporanea, si accende SKY Sport Extra.</desc>
+  </programme>
+  <programme start="20081018111500 +0200" stop="20081018113000 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Torneo fondazione Milan - Adidas Cup</title>
+    <desc lang="it">Terza edizione del torneo di calcio a 7. Diciotto squadre al via divise in due gironi. Campione in carica A&amp;G Los Angeles.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018230000 +0200" stop="20081019004500 +0200" channel="skysportextra.skytv.it">
+    <title lang="it">Basket: AJ Milano - L. F. Bologna</title>
+    <desc lang="it">Le migliori partite del campionato di serie A maschile. Nella stagione 2007/08 ha vinto il Montepaschi Siena.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Basket</category>
+  </programme>
+  <programme start="20081018020000 +0200" stop="20081018034500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Genoa - Napoli</title>
+    <desc lang="it">6a giornata. Il massimo campionato calcistico italiano a venti squadre. Le ultime tre retrocedono in serie B. Nella passata stagione l'Inter ha conquistato il suo sedicesimo scudetto.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018112500 +0200" stop="20081018133000 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Hockey: N.Y. Rangers - Buf. Sabres</title>
+    <desc lang="it">Trenta squadre scendono sui campi ghiacciati per contendersi il titolo della Nhl. Campioni in carica i Detroit Red Wings.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Hockey</category>
+  </programme>
+  <programme start="20081018133000 +0200" stop="20081018134000 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Sky Studio</title>
+    <desc lang="it">I commenti in studio prima e dopo il programma sportivo.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018134000 +0200" stop="20081018154500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Middlesbrough - Chelsea (live)</title>
+    <desc lang="it">8a giornata. Le piu' belle partite della Premier League. Al termine della stagione 2007/08 ha vinto il titolo il Manchester United.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018173000 +0200" stop="20081018175500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">SKY Calcio prepartita</title>
+    <desc lang="it">Conto alla rovescia verso il calcio di inizio delle partite. In diretta dallo studio, ultime novita' sulle formazioni, interviste ai protagonisti e analisi approfondite sulle due squadre in campo.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018175500 +0200" stop="20081018200000 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Fiorentina - Reggina (Live)</title>
+    <desc lang="it">Anticipo 7a giornata. Emozioni, gol, tattica, tecnica, tifo. Tutto questo nella massima serie del campionato piu' bello del mondo con venti squadre.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018200000 +0200" stop="20081018202500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">SKY Calcio prepartita</title>
+    <desc lang="it">Conto alla rovescia verso il calcio di inizio delle partite. In diretta dallo studio, ultime novita' sulle formazioni, interviste ai protagonisti e analisi approfondite sulle due squadre in campo.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018202500 +0200" stop="20081018223000 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Napoli - Juventus (live)</title>
+    <desc lang="it">Anticipo 7a giornata. Emozioni, gol, tattica, tecnica, tifo. Tutto questo nella massima serie del campionato piu' bello del mondo con venti squadre.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018223000 +0200" stop="20081018231500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">SKY Calcio postpartita (live)</title>
+    <desc lang="it">A pochi minuti dal fischio finale, analisi approfondita delle piu' importanti azioni di gioco, con interviste ai protagonisti.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018000000 +0200" stop="20081018020000 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Pattinaggio: Golden Skate Awards</title>
+    <desc lang="it">Appuntamento con le grandi stelle internazionali del pattinaggio.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Altri</category>
+  </programme>
+  <programme start="20081018034500 +0200" stop="20081018044500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Basket: G.S. S. Pesaro - AJ Milano</title>
+    <desc lang="it">Le migliori partite del campionato di serie A maschile. Nella stagione 2007/08 ha vinto il Montepaschi Siena.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Basket</category>
+  </programme>
+  <programme start="20081018044500 +0200" stop="20081018045500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Pre Prove (live)</title>
+    <desc lang="it">Sky migliora la visione della F1! Le immagini, native in definizione standard, sono convertite per offrirti una migliore qualita' del segnale originale. Disponibile ai possessori del decoder HD.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018045500 +0200" stop="20081018061500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">F1 Prove libere: GP di Cina (live)</title>
+    <desc lang="it">Sky migliora la visione della F1! Le immagini, native in definizione standard, sono convertite per offrirti una migliore qualita' del segnale originale. Disponibile ai possessori del decoder HD.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018061500 +0200" stop="20081018074500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Basket: G.S. S. Pesaro - AJ Milano</title>
+    <desc lang="it">Le migliori partite del campionato di serie A maschile. Nella stagione 2007/08 ha vinto il Montepaschi Siena.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Basket</category>
+  </programme>
+  <programme start="20081018074500 +0200" stop="20081018075500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Pre Qualifiche</title>
+    <desc lang="it">Le anticipazioni a pochi minuti dall'inizio delle qualificazioni.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018075500 +0200" stop="20081018093000 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">F1 Qualifiche: GP di Cina (live)</title>
+    <desc lang="it">Sky migliora la visione della F1! Le immagini, native in definizione standard, sono convertite per offrirti una migliore qualita' del segnale originale. Disponibile ai possessori del decoder HD.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Motori</category>
+  </programme>
+  <programme start="20081018093000 +0200" stop="20081018112500 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Pattinaggio: Golden Skate Awards</title>
+    <desc lang="it">Appuntamento con le grandi stelle internazionali del pattinaggio.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Altri</category>
+  </programme>
+  <programme start="20081018231500 +0200" stop="20081019010000 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">Middlesbrough - Chelsea</title>
+    <desc lang="it">8a giornata. Le piu' belle partite della Premier League. Al termine della stagione 2007/08 ha vinto il titolo il Manchester United.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018154500 +0200" stop="20081018173000 +0200" channel="skysporthd1.skytv.it">
+    <title lang="it">DC United - New England R.</title>
+    <desc lang="it">Il titolo statunitense e' stato vinto nel 2007 dallo Houston Dynamo che ha battuto in finale il New England Revolution.</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+  </programme>
+  <programme start="20081018000000 +0200" stop="20081018060000 +0200" channel="skysporthd2.skytv.it">
+    <title lang="it">SKY Sport HD2</title>
+    <desc lang="it">I migliori eventi sportivi trasmessi in Alta Definizione.</desc>
+  </programme>
+  <programme start="20081018060000 +0200" stop="20081018120000 +0200" channel="skysporthd2.skytv.it">
+    <title lang="it">SKY Sport HD2</title>
+    <desc lang="it">I migliori eventi sportivi trasmessi in Alta Definizione.</desc>
+  </programme>
+  <programme start="20081018120000 +0200" stop="20081018180000 +0200" channel="skysporthd2.skytv.it">
+    <title lang="it">SKY Sport HD2</title>
+    <desc lang="it">I migliori eventi sportivi trasmessi in Alta Definizione.</desc>
+  </programme>
+  <programme start="20081018180000 +0200" stop="20081019000000 +0200" channel="skysporthd2.skytv.it">
+    <title lang="it">SKY Sport HD2</title>
+    <desc lang="it">I migliori eventi sportivi trasmessi in Alta Definizione.</desc>
   </programme>
 </tv>

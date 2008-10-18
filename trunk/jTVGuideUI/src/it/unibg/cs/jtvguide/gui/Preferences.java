@@ -328,12 +328,14 @@ public class Preferences extends javax.swing.JFrame {
     			javax.swing.JPanel jPanelParent1 = new OnAirAndUpcoming();
     			javax.swing.JPanel jPanelParent2 = new SearchForProgram();
     			javax.swing.JPanel jPanelParent3 = new ChannelShow();
+    			javax.swing.JPanel jPanelParent4 = new MultiChannelShow();
     			javax.swing.JPanel jPanel = (JPanel) ((javax.swing.JLayeredPane)((javax.swing.JRootPane)reference.getComponent(0)).getComponent(1)).getComponent(0);
     	    	javax.swing.JTabbedPane jTabbedPane = (JTabbedPane) jPanel.getComponent(0);
     	    	jTabbedPane.removeAll();
     	    	jTabbedPane.addTab("OnAirAndUpcoming", null, jPanelParent1, null);
     	    	jTabbedPane.addTab("SearchForProgram", null, jPanelParent2, null);
     	    	jTabbedPane.addTab("ChannelShow", null, jPanelParent3, null);
+    	    	jTabbedPane.addTab("MultiChannelShow", null, jPanelParent4, null);
     		}
 
     		else
