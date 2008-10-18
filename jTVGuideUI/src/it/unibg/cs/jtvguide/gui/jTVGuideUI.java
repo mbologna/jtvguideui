@@ -29,6 +29,7 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -173,14 +174,22 @@ public class jTVGuideUI extends javax.swing.JFrame {
         	{
         		jPanel1 = new OnAirAndUpcoming();
         		jTabbedPane1.addTab("OnAirAndUpcoming", null, jPanel1, null);
+        		jPanel1.setAutoscrolls(true);
         	}
         	{
         		jPanel2 = new SearchForProgram();
         		jTabbedPane1.addTab("SearchForProgram", null, jPanel2, null);
+        		jPanel2.setAutoscrolls(true);
         	}
         	{
         		jPanel3 = new ChannelShow();
         		jTabbedPane1.addTab("ChannelShow", null, jPanel3, null);
+        		jPanel3.setAutoscrolls(true);
+        	}
+        	{
+        		jPanel4 = new MultiChannelShow();
+        		jTabbedPane1.addTab("MultiChannelShow", null, jPanel4, null);
+        		jPanel4.setAutoscrolls(true);
         	}
         }
         layout.setVerticalGroup(layout.createSequentialGroup()
@@ -206,6 +215,7 @@ public class jTVGuideUI extends javax.swing.JFrame {
         	jTextArea1.setEditable(false);
         }
         jDialog2.setVisible(false);
+        this.setResizable(false);
 
 
         pack();
@@ -326,6 +336,7 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private JPanel jPanel1;
+    private JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 

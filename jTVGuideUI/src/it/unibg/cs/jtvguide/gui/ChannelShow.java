@@ -145,7 +145,6 @@ public class ChannelShow extends JPanel {
 		}
 		for (Program p : clp) {
 			JLabel jl1 = new JLabel(p.toString());
-			jl1.setBackground(Color.WHITE);
 			if (p.getDesc() != null) {
 				jl1.setToolTipText(p.getDesc());
 			}
