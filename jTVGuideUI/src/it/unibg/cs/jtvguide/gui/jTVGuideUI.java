@@ -200,6 +200,7 @@ public class jTVGuideUI extends javax.swing.JFrame {
         jDialog1 = getJDialog1();
         jDialog1.setLocationByPlatform(false);
         jDialog1.setLocation(new java.awt.Point(100, 100));
+        jDialog1.setPreferredSize(new java.awt.Dimension(359, 149));
         jDialog1.setVisible(false);
 
         jDialog2 = getJDialog2();
@@ -272,8 +273,8 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 			{
 				jLabel1 = new JLabel();
 				jDialog1.getContentPane().add(jLabel1);
-				jLabel1.setText("jTVGuide and jTVGuideUI has been brought to you by");
-				jLabel1.setBounds(5, 11, 229, 26);
+				jLabel1.setText("jTVGuide and jTVGuideUI have been brought to you by:");
+				jLabel1.setBounds(10, 11, 321, 26);
 				jLabel1.setHorizontalTextPosition(SwingConstants.CENTER);
 				jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
 			}
@@ -281,17 +282,9 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 				jLabel2 = new JLabel();
 				jDialog1.getContentPane().add(jLabel2);
 				jLabel2.setText("Michele Bologna <michele.bologna@gmail.com>");
-				jLabel2.setBounds(81, 43, 76, 14);
+				jLabel2.setBounds(47, 48, 256, 14);
 				jLabel2.setHorizontalTextPosition(SwingConstants.CENTER);
 				jLabel2.setHorizontalAlignment(SwingConstants.CENTER);
-			}
-			{
-				jLabel3 = new JLabel();
-				jDialog1.getContentPane().add(jLabel3);
-				jLabel3.setText("and");
-				jLabel3.setHorizontalAlignment(SwingConstants.CENTER);
-				jLabel3.setHorizontalTextPosition(SwingConstants.CENTER);
-				jLabel3.setBounds(81, 68, 76, 14);
 			}
 			{
 				jLabel4 = new JLabel();
@@ -299,9 +292,9 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 				jLabel4.setText("Sebastiano Rota <sebastiano.rota@gmail.com>");
 				jLabel4.setHorizontalAlignment(SwingConstants.CENTER);
 				jLabel4.setHorizontalTextPosition(SwingConstants.CENTER);
-				jLabel4.setBounds(65, 93, 109, 14);
+				jLabel4.setBounds(57, 68, 241, 14);
 			}
-			jDialog1.setSize(247, 158);
+			jDialog1.setSize(359, 149);
 		}
 		return jDialog1;
 	}
@@ -323,7 +316,6 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private JLabel jLabel2;
-    private JLabel jLabel3;
     private JLabel jLabel4;
     private JTextArea jTextArea1;
     private JDialog jDialog2;
