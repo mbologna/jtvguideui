@@ -130,7 +130,8 @@ public class MultiChannelShow extends JPanel implements Runnable{
 				}
 
 				JScrollPane jScrollPane1 = new JScrollPane(jPanel1);
-				jScrollPane1.setBounds(0, 0, 681, 549);
+				System.out.println(this.getBounds());
+				jScrollPane1.setBounds(0, 0, this.getBounds().width, this.getBounds().height);
 
 				this.add(jScrollPane1);
 
@@ -138,7 +139,7 @@ public class MultiChannelShow extends JPanel implements Runnable{
 				this.revalidate();
 			}
 			try {
-				Thread.sleep(1000 * (r.nextInt(5) + 5));
+				Thread.sleep(1000 * 300);
 			} catch (InterruptedException e) {
 			}
 		}
