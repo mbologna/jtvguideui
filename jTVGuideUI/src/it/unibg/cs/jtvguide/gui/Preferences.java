@@ -46,7 +46,8 @@ import javax.swing.LayoutStyle;
  */
 public class Preferences extends javax.swing.JFrame {
 
-	private jTVGuideUI reference;
+	private JTVGuideUI reference;
+	private javax.swing.JFrame jFrame = this;
 
 	{
 		//Set Look & Feel
@@ -60,7 +61,7 @@ public class Preferences extends javax.swing.JFrame {
 
     /** Creates new form Preferences
      * @param guideUI */
-    public Preferences(jTVGuideUI guideUI) {
+    public Preferences(JTVGuideUI guideUI) {
     	reference = guideUI;
         initComponents();
     }
@@ -142,7 +143,7 @@ public class Preferences extends javax.swing.JFrame {
         	jButton1.addActionListener(new AggiornaProgrammazione());
         	jButton1.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jButton1ActionPerformed(evt);
+                    jFrame.dispose();
                 }
             });
         }
@@ -303,9 +304,7 @@ public class Preferences extends javax.swing.JFrame {
     				it.unibg.cs.jtvguide.xmltv.UserPreferences.getXmltvOutputFile().delete();
     				xmltvc.downloadSchedule();
     			}
-    			if (tries == 4)
-    				throw new RuntimeException(
-    				"Couldn't download or parse schedule");
+
     			parsed = xmltvParser.parse();
     			tries++;
     		}
