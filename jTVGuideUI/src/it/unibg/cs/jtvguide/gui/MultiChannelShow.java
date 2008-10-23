@@ -76,8 +76,7 @@ public class MultiChannelShow extends JPanel implements Runnable{
 
 
 				JPanel jPanel1 = new JPanel();
-				jPanel1.setLayout(new GridLayout(Math.round(channels.size()/2),2));
-
+				jPanel1.setLayout(new GridLayout((int) Math.ceil(((float)channels.size())/2),2));
 				Iterator<Channel> channelIterator = channels.iterator();
 				while(channelIterator.hasNext())
 				{
