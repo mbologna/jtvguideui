@@ -5,11 +5,12 @@
  */
 
 package it.unibg.cs.jtvguide.gui;
-import it.unibg.cs.jtvguide.model.XMLTVScheduleInspector;
-import it.unibg.cs.jtvguide.util.MD5Checksum;
 import it.unibg.cs.jtvguide.util.SystemProperties;
+import it.unibg.cs.jtvguide.xmltv.MD5Checksum;
 import it.unibg.cs.jtvguide.xmltv.XMLTVCommander;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
+import it.unibg.cs.jtvguide.xmltv.XMLTVScheduleInspector;
+
 import java.awt.BorderLayout;
 import java.awt.Image;
 import java.awt.SystemTray;

@@ -10,16 +10,12 @@
  */
 package it.unibg.cs.jtvguide.gui;
 
-import it.unibg.cs.jtvguide.jTVGuide;
-import it.unibg.cs.jtvguide.model.XMLTVScheduleInspector;
-import it.unibg.cs.jtvguide.util.MD5Checksum;
-import it.unibg.cs.jtvguide.util.SystemProperties;
-import it.unibg.cs.jtvguide.xmltv.UserPreferences;
+import it.unibg.cs.jtvguide.interfaces.xmltv.XMLTVGrabbersByCountry;
+import it.unibg.cs.jtvguide.xmltv.MD5Checksum;
 import it.unibg.cs.jtvguide.xmltv.XMLTVCommander;
-import it.unibg.cs.jtvguide.xmltv.XMLTVGrabbersByCountry;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
+import it.unibg.cs.jtvguide.xmltv.XMLTVScheduleInspector;
 
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
@@ -28,11 +24,9 @@ import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
-import javax.swing.JFileChooser;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.LayoutStyle;
-import javax.swing.SwingConstants;
 
 /**
 * This code was edited or generated using CloudGarden's Jigloo
@@ -80,16 +74,16 @@ public class Preferences extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-    	if (!it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile()
-				|| !it.unibg.cs.jtvguide.UserPreferences.getXmltvConfigFile().exists()
-				|| it.unibg.cs.jtvguide.UserPreferences.getXmltvConfigFile().length() == 0) {
+    	if (!it.unibg.cs.jtvguide.xmltv.UserPreferences.loadFromXMLFile()
+				|| !it.unibg.cs.jtvguide.xmltv.UserPreferences.getXmltvConfigFile().exists()
+				|| it.unibg.cs.jtvguide.xmltv.UserPreferences.getXmltvConfigFile().length() == 0) {
 
-    		it.unibg.cs.jtvguide.UserPreferences.saveToXMLFile();
-    		it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
+    		it.unibg.cs.jtvguide.xmltv.UserPreferences.saveToXMLFile();
+    		it.unibg.cs.jtvguide.xmltv.UserPreferences.loadFromXMLFile();
     	}
 
     	else
-    		it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
+    		it.unibg.cs.jtvguide.xmltv.UserPreferences.loadFromXMLFile();
 
 
         GroupLayout layout = new GroupLayout((JComponent)getContentPane());
@@ -127,7 +121,7 @@ public class Preferences extends javax.swing.JFrame {
 
         for (XMLTVGrabbersByCountry element : XMLTVGrabbersByCountry.values()) {
             jComboBox1.addItem(element);
-            if(element.getCOMMAND().equals(it.unibg.cs.jtvguide.UserPreferences.getXMLTVCommandByCountry()))
+            if(element.getCOMMAND().equals(it.unibg.cs.jtvguide.xmltv.UserPreferences.getXMLTVCommandByCountry()))
             	jComboBox1.setSelectedItem(element);
         }
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -187,7 +181,7 @@ public class Preferences extends javax.swing.JFrame {
         	        .addGap(11))));
 
         jCheckBox1.setText("quiet");
-        jCheckBox1.setSelected(it.unibg.cs.jtvguide.UserPreferences.isQuiet());
+        jCheckBox1.setSelected(it.unibg.cs.jtvguide.xmltv.UserPreferences.isQuiet());
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox1ActionPerformed(evt);
@@ -196,11 +190,11 @@ public class Preferences extends javax.swing.JFrame {
 
         jSlider1.setMaximum(7);
         jSlider1.setMinimum(1);
-        jSlider1.setValue(it.unibg.cs.jtvguide.UserPreferences.getDays());
+        jSlider1.setValue(it.unibg.cs.jtvguide.xmltv.UserPreferences.getDays());
         {
         	jCheckBox2 = new JCheckBox();
         	jCheckBox2.setText("with cache");
-        	jCheckBox2.setSelected(it.unibg.cs.jtvguide.UserPreferences.isWithCache());
+        	jCheckBox2.setSelected(it.unibg.cs.jtvguide.xmltv.UserPreferences.isWithCache());
         	jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     jCheckBox2ActionPerformed(evt);
@@ -243,7 +237,7 @@ public class Preferences extends javax.swing.JFrame {
         	        .addComponent(jSlider1, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE, GroupLayout.PREFERRED_SIZE)))
         	.addContainerGap(61, 61));
 
-        jLabel3.setText(Integer.toString(it.unibg.cs.jtvguide.UserPreferences.getDays())+" days");
+        jLabel3.setText(Integer.toString(it.unibg.cs.jtvguide.xmltv.UserPreferences.getDays())+" days");
 
         pack();
         this.setSize(377, 322);
@@ -266,7 +260,6 @@ public class Preferences extends javax.swing.JFrame {
 
     	public void run() {
     		XMLTVCommander xmltvc = new XMLTVCommander();
-    		System.out.println("Configuring jTVGuide and XMLTV...");
     		xmltvc.configureXMLTV();
     	}
 
@@ -280,48 +273,42 @@ public class Preferences extends javax.swing.JFrame {
         }
 
         public void run() {
-        	it.unibg.cs.jtvguide.UserPreferences.saveToXMLFile();
+        	it.unibg.cs.jtvguide.xmltv.UserPreferences.saveToXMLFile();
         	XMLTVCommander xmltvc = new XMLTVCommander();
         	XMLTVParserImpl xmltvParser = new XMLTVParserImpl();
         	Calendar c = Calendar.getInstance();
-    		c.add(Calendar.DATE, it.unibg.cs.jtvguide.UserPreferences.getDays());
+    		c.add(Calendar.DATE, it.unibg.cs.jtvguide.xmltv.UserPreferences.getDays());
     		int tries = 0;
 
     		boolean parsed = false;
     		while (parsed == false && tries <= 3) {
     			if (!new XMLTVScheduleInspector().isUpToDate()
-    					|| !MD5Checksum.checkMD5(it.unibg.cs.jtvguide.UserPreferences
+    					|| !MD5Checksum.checkMD5(it.unibg.cs.jtvguide.xmltv.UserPreferences
     							.getXmltvConfigFile().toString(), MD5Checksum
     							.readMD5FromFile())) {
-    				if(!it.unibg.cs.jtvguide.UserPreferences.getXmltvConfigFile().exists()){
-    					System.out.println("Configuring jTVGuide and XMLTV...");
+    				if(!it.unibg.cs.jtvguide.xmltv.UserPreferences.getXmltvConfigFile().exists()){
     					xmltvc.configureXMLTV();
     				}
-    				System.out.println("Updating schedule...");
-    				it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
+    				it.unibg.cs.jtvguide.xmltv.UserPreferences.loadFromXMLFile();
     				xmltvc.downloadSchedule();
     			}
 
     			if(!new XMLTVScheduleInspector().isUpToDate(c.getTime()))
     			{
-    				System.out.println("Updating schedule...");
-    				it.unibg.cs.jtvguide.UserPreferences.loadFromXMLFile();
+    				it.unibg.cs.jtvguide.xmltv.UserPreferences.loadFromXMLFile();
     				xmltvc.downloadSchedule();
     			}
 
     			if (tries >= 1) {
-    				System.out.println("Couldn't parsing. Downloading a new schedule.");
-    				it.unibg.cs.jtvguide.UserPreferences.getXmltvOutputFile().delete();
+    				it.unibg.cs.jtvguide.xmltv.UserPreferences.getXmltvOutputFile().delete();
     				xmltvc.downloadSchedule();
     			}
     			if (tries == 4)
     				throw new RuntimeException(
     				"Couldn't download or parse schedule");
-    			System.out.println("Trying to parse schedule...");
     			parsed = xmltvParser.parse();
     			tries++;
     		}
-    		System.out.println("Schedule parsed correctly.");
 
     		if(parsed)
     		{
@@ -350,27 +337,27 @@ public class Preferences extends javax.swing.JFrame {
     }
 
 	private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-            it.unibg.cs.jtvguide.UserPreferences.setCountry((XMLTVGrabbersByCountry) jComboBox1.getSelectedItem());
+            it.unibg.cs.jtvguide.xmltv.UserPreferences.setCountry((XMLTVGrabbersByCountry) jComboBox1.getSelectedItem());
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
         // TODO add your handling code here:
         jLabel3.setText(jSlider1.getValue() + " days");
-        it.unibg.cs.jtvguide.UserPreferences.setDays(jSlider1.getValue());
+        it.unibg.cs.jtvguide.xmltv.UserPreferences.setDays(jSlider1.getValue());
     }//GEN-LAST:event_jSlider1StateChanged
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
     	if (jCheckBox1.isSelected())
-    		it.unibg.cs.jtvguide.UserPreferences.setQuiet(true);
+    		it.unibg.cs.jtvguide.xmltv.UserPreferences.setQuiet(true);
     	else
-    		it.unibg.cs.jtvguide.UserPreferences.setQuiet(false);
+    		it.unibg.cs.jtvguide.xmltv.UserPreferences.setQuiet(false);
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jCheckBox2ActionPerformed(ActionEvent evt) {
     	if (jCheckBox2.isSelected())
-    		it.unibg.cs.jtvguide.UserPreferences.setWithCache(true);
+    		it.unibg.cs.jtvguide.xmltv.UserPreferences.setWithCache(true);
     	else
-    		it.unibg.cs.jtvguide.UserPreferences.setWithCache(false);
+    		it.unibg.cs.jtvguide.xmltv.UserPreferences.setWithCache(false);
     	//TODO add your code for jCheckBox2.actionPerformed
     }
     /**
