@@ -2,16 +2,11 @@ package it.unibg.cs.jtvguide.gui;
 
 import it.unibg.cs.jtvguide.model.Program;
 import it.unibg.cs.jtvguide.model.Schedule;
-import it.unibg.cs.jtvguide.xmltv.MD5Checksum;
-import it.unibg.cs.jtvguide.xmltv.UserPreferences;
-import it.unibg.cs.jtvguide.xmltv.XMLTVCommander;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
-import it.unibg.cs.jtvguide.xmltv.XMLTVScheduleInspector;
 
 import java.awt.BorderLayout;
 import java.util.List;
 
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -22,15 +17,7 @@ import javax.swing.event.DocumentListener;
 
 public class SearchForProgram extends JPanel {
 
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 2219149016130289380L;
-	/**
-	 *
-	 */
-
-	//JPanel jp = new JPanel();
 	JTextField jt = new JTextField();
 	JTextArea ja = new JTextArea();
 	JScrollPane scrollPane = new JScrollPane(ja);
@@ -90,6 +77,5 @@ public class SearchForProgram extends JPanel {
 		@Override
 		public void changedUpdate(DocumentEvent arg0) {
 		}
-
 	}
 }

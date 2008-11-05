@@ -6,7 +6,6 @@ import it.unibg.cs.jtvguide.model.Schedule;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Rectangle;
 import java.util.ArrayList;
@@ -21,28 +20,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
-
-/**
-* This code was edited or generated using CloudGarden's Jigloo
-* SWT/Swing GUI Builder, which is free for non-commercial
-* use. If Jigloo is being used commercially (ie, by a corporation,
-* company or business for any purpose whatever) then you
-* should purchase a license for each developer using Jigloo.
-* Please visit www.cloudgarden.com for details.
-* Use of Jigloo implies acceptance of these licensing terms.
-* A COMMERCIAL LICENSE HAS NOT BEEN PURCHASED FOR
-* THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
-* LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
-*/
 public class ChannelShow extends JPanel {
 
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 4092293337693014545L;
-	/**
-	 *
-	 */
 	Schedule schedule;
 	String selezionato = "";
 	private javax.swing.JComboBox jComboBox1 = new javax.swing.JComboBox();
@@ -58,8 +38,8 @@ public class ChannelShow extends JPanel {
 	}
 
 	private void initComponents() {
-        this.setLayout(null);
-        jLabel1.setText("Channel: ");
+		this.setLayout(null);
+		jLabel1.setText("Channel: ");
 		jLabel1.setBounds(10,10,100,20);
 		jComboBox1.setBounds(70,10,120,20);
 		this.add(jLabel1);
@@ -76,13 +56,13 @@ public class ChannelShow extends JPanel {
 			jComboBox1.addItem(channelIterator.next().getDisplayName());
 
 		jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				jComboBox1ActionPerformed(evt);
+			}
+		});
 	}
 
-	private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+	private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {
 		selezionato = (String) jComboBox1.getSelectedItem();
 		paintShow();
 	}
@@ -109,15 +89,15 @@ public class ChannelShow extends JPanel {
 		Calendar tomorrow = Calendar.getInstance();
 		tomorrow.add(Calendar.DATE, 1);
 
-        List<Program> lk = new ArrayList<Program>();
-        lk = schedule.getOnAirPrograms();
+		List<Program> lk = new ArrayList<Program>();
+		lk = schedule.getOnAirPrograms();
 		List<Program> lp = new ArrayList<Program>();
 		lp = schedule.getProgramsFromDateToDate(today.getTime(), tomorrow.getTime());
 
 		List<Program> clk = new ArrayList<Program>();
 		List<Program> clp = new ArrayList<Program>();
 
-        for(int i=0;i<lk.size();i++)
+		for(int i=0;i<lk.size();i++)
 		{
 			if(selezionato.equals(((Channel)lk.get(i).getChannel()).getDisplayName()))
 				clk.add(lk.get(i));
