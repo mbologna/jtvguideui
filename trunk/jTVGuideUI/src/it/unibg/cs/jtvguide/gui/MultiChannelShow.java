@@ -6,9 +6,7 @@ import it.unibg.cs.jtvguide.model.Schedule;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -27,9 +25,6 @@ import javax.swing.border.Border;
 
 public class MultiChannelShow extends JPanel implements Runnable{
 
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = -9221049871768124350L;
 	private static Thread thread;
 	Random r = new Random();

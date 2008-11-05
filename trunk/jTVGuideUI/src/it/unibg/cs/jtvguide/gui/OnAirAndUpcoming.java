@@ -2,18 +2,12 @@ package it.unibg.cs.jtvguide.gui;
 
 import it.unibg.cs.jtvguide.model.Program;
 import it.unibg.cs.jtvguide.model.Schedule;
-import it.unibg.cs.jtvguide.util.FileUtils;
-import it.unibg.cs.jtvguide.xmltv.MD5Checksum;
-import it.unibg.cs.jtvguide.xmltv.UserPreferences;
-import it.unibg.cs.jtvguide.xmltv.XMLTVCommander;
 import it.unibg.cs.jtvguide.xmltv.XMLTVParserImpl;
-import it.unibg.cs.jtvguide.xmltv.XMLTVScheduleInspector;
 
 import java.awt.GridLayout;
 import java.util.List;
 import java.util.Random;
 
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
@@ -21,9 +15,6 @@ import javax.swing.UIManager;
 
 public class OnAirAndUpcoming extends JPanel implements Runnable {
 
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = -9221049871768124350L;
 	private static Thread thread;
 	Random r = new Random();
