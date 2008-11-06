@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -29,6 +30,7 @@ public class JTVGuideUI extends javax.swing.JFrame {
 	private TrayIcon trayIcon;
 
 	public JTVGuideUI(){
+		it.unibg.cs.jtvguide.xmltv.UserPreferences.loadFromXMLFile();
 		initComponents();
 		sysTray = SystemTray.getSystemTray ();
 		Image image = Toolkit.getDefaultToolkit().getImage("icons/tv.png");

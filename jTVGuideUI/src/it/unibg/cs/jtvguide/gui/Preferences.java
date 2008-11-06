@@ -1,13 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
- * Preferences.java
- *
- * Created on 1-set-2008, 14.07.00
- */
 package it.unibg.cs.jtvguide.gui;
 
 import it.unibg.cs.jtvguide.interfaces.XMLTVGrabbersByCountry;
@@ -18,6 +8,7 @@ import it.unibg.cs.jtvguide.xmltv.XMLTVScheduleInspector;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.Calendar;
 
 import javax.swing.GroupLayout;
@@ -252,7 +243,12 @@ public class Preferences extends javax.swing.JFrame {
         }
 
         public void run() {
-			it.unibg.cs.jtvguide.xmltv.UserPreferences.saveToXMLFile();
+			try {
+				it.unibg.cs.jtvguide.xmltv.UserPreferences.saveToXMLFile();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
         	XMLTVCommander xmltvc = new XMLTVCommander();
         	XMLTVParserImpl xmltvParser = new XMLTVParserImpl();
         	Calendar c = Calendar.getInstance();
