@@ -1,14 +1,14 @@
 #Fat Jar Configuration File
-#Thu Aug 21 19:16:07 CEST 2008
+#Fri Nov 07 16:52:03 CET 2008
 onejar.license.required=false
 manifest.classpath=
 manifest.removesigners=true
 onejar.checkbox=false
-jarname=Prova1_fat.jar
+jarname=jTVGuideUI.jar
 manifest.mergeall=true
-manifest.mainclass=it.unibg.cs.jtvguide.graphic.jTVGuideUI
+manifest.mainclass=it.unibg.cs.jtvguide.gui.JTVGuideUI
 manifest.file=<createnew>
 jarname.isextern=false
 onejar.expand=
 excludes=
-includes=<inc|Prova1/src>;<inc|Prova1/bin>
+includes=
